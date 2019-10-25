@@ -2,6 +2,7 @@
 {-# LANGUAGE OverloadedStrings #-}
 {-# LANGUAGE TemplateHaskell #-}
 {-# LANGUAGE MultiParamTypeClasses #-}
+{-# LANGUAGE QuasiQuotes #-}
 {-# LANGUAGE TypeFamilies #-}
 module Handler.Home where
 
@@ -14,7 +15,7 @@ getHomeR = do
     defaultLayout $ do
         toWidgetHead [julius|
             function ola(){
-                alert("ola mundo";)
+                alert("ola mundo");
             }
         |]
         toWidgetHead [lucius|
