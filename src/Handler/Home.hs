@@ -18,7 +18,8 @@ getPage1R = do
         [whamlet|
             <h1> Página 1
             
-            <a href={@Page1R}>Voltar
+            <a href={@HomeR}>
+                Voltar
         |]
 
 getAdsR :: Handler TypedContent
