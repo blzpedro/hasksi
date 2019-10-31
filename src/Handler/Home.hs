@@ -11,9 +11,19 @@ import Data.FileEmbed(embedFile)
 --import Network.HTTP.Types.Status
 import Database.Persist.Postgresql
 
+getPage1R :: Handler Html
+getPage1R = do
+    defaultLayout $ do
+        addScript (StaticR ola_js)
+        [whamlet|
+            <h1> Página 1
+            
+            <a href={@Page1R}>Voltar
+        |]
+
 getAdsR :: Handler TypedContent
 getAdsR = return $ TypedContent "text/plain"
-    $ toContent $(embedFile "static/ads.txt")
+    $ todefaultLayout dFile "static/ads.txt")
 
 getHomeR :: Handler Html
 getHomeR = do
