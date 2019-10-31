@@ -23,7 +23,7 @@ getPage1R = do
 
 getAdsR :: Handler TypedContent
 getAdsR = return $ TypedContent "text/plain"
-    $ todefaultLayout dFile "static/ads.txt")
+    $ toContent $(embedFile "static/ads.txt")
 
 getHomeR :: Handler Html
 getHomeR = do
