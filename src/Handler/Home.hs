@@ -13,6 +13,7 @@ import Database.Persist.Postgresql
 getHomeR :: Handler Html
 getHomeR = do
     defaultLayout $ do
+        addStyleSheet (StaticR css_bootstrap_css)
         toWidgetHead [julius|
             function ola(){
                 alert("ola mundo");
@@ -25,5 +26,5 @@ getHomeR = do
         |]
         [whamlet|
             <h1>Olá mundo
-            <button onclick="ola()">Clickar
+            <button onclick="ola()" class="btn btn-danger">Clickar
         |]
