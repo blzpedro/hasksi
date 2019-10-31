@@ -17,6 +17,8 @@ getPage3R :: Handler Html
 getPage3R = do
     defaultLayout $ do
         $(whamletFile "templates/page3.hamlet")
+        toWidgetHead $(luciusFile "templates/page2.lucius")
+        toWidgetHead $(juliusFile "templates/page2.julius")
 
 getPage2R :: Handler Html
 getPage2R = do
@@ -28,6 +30,8 @@ getPage2R = do
 getPage1R :: Handler Html
 getPage1R = do
     defaultLayout $ do
+        toWidgetHead $(luciusFile "templates/page2.lucius")
+        toWidgetHead $(juliusFile "templates/page2.julius")
         addScript (StaticR ola_js)
         [whamlet|
             <h1> Página 1
@@ -46,6 +50,8 @@ getHomeR = do
         -- addScriptRemote "url" -> js cdn
         -- addScript (Static script_js) -> js interno
         -- 8aQZvtkO
+        toWidgetHead $(luciusFile "templates/page2.lucius")
+        toWidgetHead $(juliusFile "templates/page2.julius")
         addStylesheet (StaticR css_bootstrap_css)
         toWidgetHead [julius|
             function ola(){
