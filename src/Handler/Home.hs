@@ -65,6 +65,16 @@ getHomeR = do
         |]
         [whamlet|
             <h1>Olá mundo
+            <ul>
+                <li>
+                    <a href=@{Page1R}>Página 1
+                    
+                <li>
+                    <a href=@{Page2R}>Página 2
+                    
+                <li>
+                    <a href=@{Page3R}>Página 3
+            
             <img src=@{StaticR santos_png}>
             
             <button onclick="ola()" class="btn btn-danger">Clickar

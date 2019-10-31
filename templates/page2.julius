@@ -4,8 +4,6 @@ function teste(){
 
 teste();
 
-        }
-    }
     window.__cmp = function (c) {
         var b = arguments;
         if (!b.length) {
