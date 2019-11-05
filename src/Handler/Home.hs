@@ -49,6 +49,8 @@ getAdsR = return $ TypedContent "text/plain"
 getHomeR :: Handler Html
 getHomeR = do
     defaultLayout $ do
+        addScriptRemote "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+        addScriptRemote "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         -- addScriptRemote "url" -> js cdn
         -- addScript (Static script_js) -> js interno
         -- 8aQZvtkO
@@ -60,6 +62,7 @@ getHomeR = do
             function ola(){
                 alert("ola mundo");
             }
+            
         |]
         toWidgetHead [lucius|
             h1{
@@ -67,7 +70,7 @@ getHomeR = do
             }
         |]
         [whamlet|
-            <h1>Olá mundo
+            <h1>Olá mundovbnhjjmn
             <ul>
                 <li>
                     <a href=@{Page1R}>Página 1
