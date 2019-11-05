@@ -52,8 +52,8 @@ getHomeR = do
         -- addScript (Static script_js) -> js interno
         -- 8aQZvtkO
         $(whamletFile "templates/header.hamlet")
-        toWidgetHead $(luciusFile "templates/page2.lucius")
-        toWidgetHead $(juliusFile "templates/page2.julius")
+        toWidgetHead $(luciusFile "templates/adCSS.lucius")
+        toWidgetHead $(juliusFile "templates/adScript.julius")
         addStylesheet (StaticR css_bootstrap_css)
         toWidgetHead [julius|
             function ola(){
