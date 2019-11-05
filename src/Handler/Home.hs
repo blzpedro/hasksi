@@ -34,6 +34,8 @@ getPage1R = do
         toWidgetHead $(juliusFile "templates/page2.julius")
         addScript (StaticR ola_js)
         [whamlet|
+        
+        
             <h1> Página 1
             
             <a href=@{HomeR}>
@@ -50,6 +52,7 @@ getHomeR = do
         -- addScriptRemote "url" -> js cdn
         -- addScript (Static script_js) -> js interno
         -- 8aQZvtkO
+        $(whamletFile "templates/header.hamlet")
         toWidgetHead $(luciusFile "templates/page2.lucius")
         toWidgetHead $(juliusFile "templates/page2.julius")
         addStylesheet (StaticR css_bootstrap_css)
