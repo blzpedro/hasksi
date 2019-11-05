@@ -13,32 +13,27 @@ import Text.Julius
 --import Network.HTTP.Types.Status
 import Database.Persist.Postgresql
 
-getPage3R :: Handler Html
-getPage3R = do
-    defaultLayout $ do
-        $(whamletFile "templates/page3.hamlet")
-        toWidgetHead $(luciusFile "templates/page2.lucius")
-        toWidgetHead $(juliusFile "templates/page2.julius")
 
-getPage2R :: Handler Html
-getPage2R = do
+getContatoR :: Handler Html
+getContatoR = do
     defaultLayout $ do
-        $(whamletFile "templates/page2.hamlet")
-        toWidgetHead $(luciusFile "templates/page2.lucius")
-        toWidgetHead $(juliusFile "templates/page2.julius")
+        addScriptRemote "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+        addScriptRemote "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        $(whamletFile "templates/header.hamlet")
+        toWidgetHead $(luciusFile "templates/adCSS.lucius")
+        toWidgetHead $(juliusFile "templates/adScript.julius")
+        addStylesheet (StaticR css_bootstrap_css)
 
-getPage1R :: Handler Html
-getPage1R = do
+getGaleriaR :: Handler Html
+getGaleriaR = do
     defaultLayout $ do
-        toWidgetHead $(luciusFile "templates/page2.lucius")
-        toWidgetHead $(juliusFile "templates/page2.julius")
-        addScript (StaticR ola_js)
-        [whamlet|
-            <h1> Página 1
-            
-            <a href=@{HomeR}>
-                Voltar
-        |]
+        addScriptRemote "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+        addScriptRemote "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        $(whamletFile "templates/header.hamlet")
+        toWidgetHead $(luciusFile "templates/adCSS.lucius")
+        toWidgetHead $(juliusFile "templates/adScript.julius")
+        addStylesheet (StaticR css_bootstrap_css)
+        
 
 getAdsR :: Handler TypedContent
 getAdsR = return $ TypedContent "text/plain"
