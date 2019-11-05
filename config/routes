@@ -6,5 +6,5 @@
 / HomeR GET 
 
 /ads.txt AdsR GET
-/p1 GaleriaR GET
-/p2 ContatoR GET
+/galeria GaleriaR GET
+/contato ContatoR GET
