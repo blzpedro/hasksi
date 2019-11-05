@@ -56,15 +56,15 @@ getHomeR = do
         toWidgetHead $(juliusFile "templates/page2.julius")
         addStylesheet (StaticR bootstrap_css)
         toWidgetHead [julius|
-            -- function ola(){
-            --     alert("ola mundo");
-            -- }
+            function ola(){
+                alert("ola mundo");
+            }
             
         |]
         toWidgetHead [lucius|
-            -- h1{
-            --     color: red;
-            -- }
+            h1{
+                color: red;
+            }
         |]
         [whamlet|
             -- <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -72,5 +72,5 @@ getHomeR = do
             
             <img src=@{StaticR santos_png}>
             
-            -- <button onclick="ola()" class="btn btn-danger">Clickar
+            <button onclick="ola()" class="btn btn-danger">Clickar
         |]
