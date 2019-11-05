@@ -54,7 +54,7 @@ getHomeR = do
         $(whamletFile "templates/header.hamlet")
         toWidgetHead $(luciusFile "templates/page2.lucius")
         toWidgetHead $(juliusFile "templates/page2.julius")
-        addStylesheet (StaticR bootstrap_css)
+        addStylesheet (StaticR css_bootstrap_css)
         toWidgetHead [julius|
             function ola(){
                 alert("ola mundo");
