@@ -45,6 +45,8 @@ getHomeR = do
     defaultLayout $ do
         addScriptRemote "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"
         addScriptRemote "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        addScriptRemote "https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"
+        addScriptRemote "https://cdnjs.cloudflare.com/ajax/libs/startbootstrap-creative/5.1.8/js/creative.min.js"
         -- addScript (Static script_js) -> js interno
         -- 8aQZvtkO
         $(whamletFile "templates/home.hamlet")
