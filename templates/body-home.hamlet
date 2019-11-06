@@ -1,4 +1,5 @@
 <div class="card-deck">
+  <p>Algumas armas do jogo
   <div class="card">
     <img src=@{StaticR ak_redline_low_jpg} class="card-img-top" alt="ak-redline">
     <div class="card-body">
