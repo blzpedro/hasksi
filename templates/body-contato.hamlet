@@ -1,0 +1,10 @@
+<form>
+  <div class="form-group">
+    <label for="basic-url">URL de tradeoffer
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="basic-addon3">https://steamcommunity.com/tradeoffer/new
+  <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Exemplo de textarea
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3">
