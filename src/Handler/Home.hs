@@ -50,7 +50,6 @@ getHomeR = do
         $(whamletFile "templates/home.hamlet")
         toWidgetHead $(luciusFile "templates/adCSS.lucius")
         toWidgetHead $(juliusFile "templates/adScript.julius")
-        addStylesheet (StaticR css_bootstrap_css)
         addStylesheet (StaticR css_creative_css)
         toWidgetHead [julius|
             function ola(){
