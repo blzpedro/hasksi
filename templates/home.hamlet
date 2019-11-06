@@ -17,6 +17,12 @@
     <span class="carousel-control-next-icon" aria-hidden="true">
     <span class="sr-only">Próximo
     
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-6">Alguns itens do CSGO
+    <p class="lead">
+
+    
 <div class="card-deck">
   <div class="card">
     <img src=@{StaticR ak_redline_low_jpg} class="card-img-top" alt="ak-redline">
