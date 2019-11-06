@@ -5,11 +5,11 @@
     <li data-target="#carouselExampleIndicators" data-slide-to="2">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src=@{StaticR csgo_banner_mid_jpg} class="" alt="Primeiro Slide">
+      <img src=@{StaticR csgo_banner_mid_jpg} class="d-block w-100" alt="Primeiro Slide">
     <div class="carousel-item">
-      <img src=@{StaticR csgo_friends_mid_png} class="" alt="Segundo Slide">
+      <img src=@{StaticR csgo_friends_mid_png} class="d-block w-100" alt="Segundo Slide">
     <div class="carousel-item">
-      <img src=@{StaticR csgo_mibr_mid_jpg} class="" alt="Terceiro Slide">
+      <img src=@{StaticR csgo_mibr_mid_jpg} class="d-block w-100" alt="Terceiro Slide">
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true">
     <span class="sr-only">Anterior
@@ -18,7 +18,7 @@
     <span class="sr-only">Próximo
 <div class="jumbotron jumbotron-fluid">
   <div class="container">
-    <h1 class="display-8">Alguns itens do CSGO
+    <h1 class="display-12">Alguns itens do CSGO
     <p class="lead">
 <div class="card-deck">
   <div class="card">
