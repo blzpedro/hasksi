@@ -7,4 +7,3 @@
                 <a href=@{GaleriaR} class="nav-link">Galeria
             <li class="nav-item">
                 <a href=@{ContatoR} class="nav-link">Contato
-        
