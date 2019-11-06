@@ -59,10 +59,9 @@ getHomeR = do
             
         |]
         toWidgetHead [lucius|
-            --h1{
-               -- color: red;
-           -- }
+          
         |]
+        
         [whamlet|
-            --<h1>Olá mundo
+            
         |]
