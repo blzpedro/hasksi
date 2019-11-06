@@ -1,19 +1,19 @@
 <div class="card-deck">
   <div class="card">
-    <img class="card-img-top" src=".../100px200/" alt="Imagem de capa do card">
+    <img @{StaticR ak_redline_low_jpg} class="card-img-top" alt="ak-redline">
     <div class="card-body">
-      <h5 class="card-title">Título do card
-      <p class="card-text">Este é um card mais longo com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional. Este conteúdo é um pouco maior.
+      <h5 class="card-title">Ak-47 Redline
+      <p class="card-text">Dano alto, rifle principal.
 
   <div class="card">
-    <img class="card-img-top" src=".../100px200/" alt="Imagem de capa do card">
+    <img @{StaticR awp_asimov_low_jpg} class="card-img-top"  alt="awp-asimov">
     <div class="card-body">
-      <h5 class="card-title">Título do card
-      <p class="card-text">Este é um card com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional.
+      <h5 class="card-title">Awp Asimov
+      <p class="card-text">Dano alto, rifle de ferrolho de precisão.
 
   <div class="card">
-    <img class="card-img-top" src=".../100px200/" alt="Imagem de capa do card">
+    <img @{StaticR m4a4_rei_dragao_low_jpg} class="card-img-top"  alt="m4a4-rei-dragao">
     <div class="card-body">
-      <h5 class="card-title">Título do card
-      <p class="card-text">Este é um card maior com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional. Este card tem o conteúdo ainda maior que o primeiro, para mostrar a altura igual, em ação.
+      <h5 class="card-title">M4a4 Rei Dragao
+      <p class="card-text">Dano alto, rifle principal.
 
