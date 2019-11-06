@@ -67,7 +67,7 @@ getHomeR = do
         [whamlet|
             <h1>Olá mundo
             
-            <img src=@{StaticR santos_png}>
+            --<img src=@{StaticR santos_png}>
             
-            <button onclick="ola()" class="btn btn-danger">Clickar
+            --<button onclick="ola()" class="btn btn-danger">Clickar
         |]
