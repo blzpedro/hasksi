@@ -29,13 +29,11 @@
     <div class="card-body">
       <h5 class="card-title">Ak-47 Redline
       <p class="card-text">Dano alto, rifle principal.
-
   <div class="card">
     <img src=@{StaticR awp_asimov_low_jpg} class="card-img-top"  alt="awp-asimov">
     <div class="card-body">
       <h5 class="card-title">Awp Asimov
       <p class="card-text">Dano alto, rifle de ferrolho de precisão.
-
   <div class="card">
     <img src=@{StaticR m4a4_rei_dragao_low_jpg} class="card-img-top"  alt="m4a4-rei-dragao">
     <div class="card-body">
