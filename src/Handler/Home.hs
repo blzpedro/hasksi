@@ -60,15 +60,9 @@ getHomeR = do
             
         |]
         toWidgetHead [lucius|
-        .header {
-            background-image: url('../static/bg.jpg');
-            background-attachment: fixed;
-            background-size: cover;
-            background-position: center;
-        }
+
         |]
         
         [whamlet|
-            <header>
-            <img src=@{StaticR bg_jpg}
+
         |]

@@ -51,7 +51,7 @@ a {
 }
 
 .header {
-    background-image: url('../static/bg.jpg');
+    background-color: white;
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
