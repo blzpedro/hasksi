@@ -47,7 +47,6 @@ getHomeR = do
         addScriptRemote "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         -- addScript (Static script_js) -> js interno
         -- 8aQZvtkO
-        $(whamletFile "templates/nav-header.hamlet")
         $(whamletFile "templates/home.hamlet")
         toWidgetHead $(luciusFile "templates/adCSS.lucius")
         toWidgetHead $(juliusFile "templates/adScript.julius")
