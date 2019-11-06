@@ -20,6 +20,7 @@ getContatoR = do
         addScriptRemote "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"
         addScriptRemote "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         $(whamletFile "templates/nav-header.hamlet")
+        $(whamletFile "templates/body-contato.hamlet")
         toWidgetHead $(luciusFile "templates/adCSS.lucius")
         toWidgetHead $(juliusFile "templates/adScript.julius")
         addStylesheet (StaticR css_bootstrap_css)
@@ -47,8 +48,7 @@ getHomeR = do
         -- addScript (Static script_js) -> js interno
         -- 8aQZvtkO
         $(whamletFile "templates/nav-header.hamlet")
-        $(whamletFile "templates/header.hamlet")
-        $(whamletFile "templates/body-home.hamlet")
+        $(whamletFile "templates/home.hamlet")
         toWidgetHead $(luciusFile "templates/adCSS.lucius")
         toWidgetHead $(juliusFile "templates/adScript.julius")
         addStylesheet (StaticR css_bootstrap_css)
