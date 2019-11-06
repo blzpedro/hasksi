@@ -17,13 +17,7 @@
                 
                 <li class="nav-item">
                     <a class="nav-link " data-value="contato" href="#">Contato
-    <header class="header">
-        <div class="overlay">
-        <div class="container">
-            <div class="description">
-                <h1>Haskellmilgrau CSGO
-                    <p>Faça parte do nosso time de CSGO.
-                    <button class="btn btn-outline-secondary btn-lg">Veja mais</button>
+
     <!-- galeria -->
     <div class="galeria">
         <h1 class="text-center">Galeria
@@ -97,5 +91,5 @@
                             <textarea class="form-control form-control-lg">
 
 
-                        <input type="submit" class="btn btn-secondary btn-block" value="Send" name="">
+                        <input type="submit" class="btn btn-secondary btn-block" value="Enviar" name="">
 
