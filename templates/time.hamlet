@@ -4,7 +4,7 @@
             <h1 class="text-center">Nosso time
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-12 item">
-                    <img src="img/gcr.jpg" class="img-fluid" alt="time">
+                    <img src=@{StaticR img_gcr_jpg} class="img-fluid" alt="time">
                     <div class="des">
                         gcR
                     
