@@ -4,7 +4,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-md-4 col-sm-12">
-                    <img src=@{StaticR img_awp_asimov_jpg} class="img-fluid">
+                    <img src=@{StaticR img_awp_asimov_jpg} alt='awp-asimov' class="img-fluid">
                 
                 <div class="col-lg-4 col-md-4 col-sm-12">
                     <img src=@{StaticR img_ak_redline_jpg} class="img-fluid">
