@@ -13,14 +13,26 @@ import Text.Julius
 --import Network.HTTP.Types.Status
 import Database.Persist.Postgresql
 
+getTimeR :: Handler Html
+getTimeR = do
+    defaultLayout $ do
+        addScriptRemote "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+        addScriptRemote "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        $(whamletFile "templates/time.hamlet")
+        toWidgetHead $(luciusFile "templates/main.lucius")
+        toWidgetHead $(juliusFile "templates/main.julius")        
+        toWidgetHead $(luciusFile "templates/adCSS.lucius")
+        toWidgetHead $(juliusFile "templates/adScript.julius")
+        addStylesheet (StaticR css_bootstrap_css)
 
 getContatoR :: Handler Html
 getContatoR = do
     defaultLayout $ do
         addScriptRemote "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"
         addScriptRemote "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        $(whamletFile "templates/nav-header.hamlet")
-        $(whamletFile "templates/body-contato.hamlet")
+        $(whamletFile "templates/contato.hamlet")
+        toWidgetHead $(luciusFile "templates/main.lucius")
+        toWidgetHead $(juliusFile "templates/main.julius")        
         toWidgetHead $(luciusFile "templates/adCSS.lucius")
         toWidgetHead $(juliusFile "templates/adScript.julius")
         addStylesheet (StaticR css_bootstrap_css)
@@ -30,7 +42,9 @@ getGaleriaR = do
     defaultLayout $ do
         addScriptRemote "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"
         addScriptRemote "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        $(whamletFile "templates/nav-header.hamlet")
+        $(whamletFile "templates/galeria.hamlet")
+        toWidgetHead $(luciusFile "templates/main.lucius")
+        toWidgetHead $(juliusFile "templates/main.julius")
         toWidgetHead $(luciusFile "templates/adCSS.lucius")
         toWidgetHead $(juliusFile "templates/adScript.julius")
         addStylesheet (StaticR css_bootstrap_css)

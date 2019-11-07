@@ -7,4 +7,5 @@
 
 /ads.txt AdsR GET
 /galeria GaleriaR GET
+/time    TimeR GET
 /contato ContatoR GET
