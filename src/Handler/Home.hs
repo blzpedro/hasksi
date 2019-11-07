@@ -16,7 +16,7 @@ import Database.Persist.Postgresql
 getTimeR :: Handler Html
 getTimeR = do
     defaultLayout $ do
-        addStylesheet $ StaticR css_bootstrap_css
+        addStylesheet (StaticR css_bootstrap_css)
         addScript $ StaticR js_jquery_min_js
         addScript $ StaticR js_bootstrap_js
         toWidgetHead $(luciusFile "templates/adCSS.lucius")
@@ -35,7 +35,7 @@ getTimeR = do
 getContatoR :: Handler Html
 getContatoR = do
     defaultLayout $ do
-        addStylesheet $ StaticR css_bootstrap_css
+        addStylesheet (StaticR css_bootstrap_css)
         addScript $ StaticR js_jquery_min_js
         addScript $ StaticR js_bootstrap_js
         toWidgetHead $(luciusFile "templates/adCSS.lucius")
@@ -54,7 +54,7 @@ getContatoR = do
 getGaleriaR :: Handler Html
 getGaleriaR = do
     defaultLayout $ do
-        addStylesheet $ StaticR css_bootstrap_css
+        addStylesheet (StaticR css_bootstrap_css)
         addScript $ StaticR js_jquery_min_js
         addScript $ StaticR js_bootstrap_js
         toWidgetHead $(luciusFile "templates/adCSS.lucius")
@@ -73,7 +73,7 @@ getGaleriaR = do
 getSobreR :: Handler Html
 getSobreR = do
     defaultLayout $ do
-        addStylesheet $ StaticR css_bootstrap_css
+        addStylesheet (StaticR css_bootstrap_css)
         addScript $ StaticR js_jquery_min_js
         addScript $ StaticR js_bootstrap_js
         toWidgetHead $(luciusFile "templates/adCSS.lucius")
@@ -99,9 +99,9 @@ getHomeR = do
     defaultLayout $ do
         -- addScript (Static script_js) -> js interno
         -- 8aQZvtkO
-        addStylesheet $ Static css_bootstrap_css
-        addScript $ Static js_jquery_min_js
-        addScript $ Static js_bootstrap_js
+        addStylesheet (StaticR css_bootstrap_css)
+        addScript  StaticR js_jquery_min_js
+        addScript  StaticR js_bootstrap_js
         toWidgetHead $(luciusFile "templates/adCSS.lucius")
         toWidgetHead $(juliusFile "templates/adScript.julius")
         toWidgetHead $(luciusFile "templates/main.lucius")
