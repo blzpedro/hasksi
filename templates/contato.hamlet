@@ -32,11 +32,9 @@
                             <input type="text" class="form-control form-control-lg" placeholder="Your Name" name="">
                         
                         <div class="form-group">
-                            <input type="email" class="form-control form-control-lg" placeholder="YourEmail@email.com"
-                                name="email">
+                            <input type="email" class="form-control form-control-lg" placeholder="YourEmail@email.com" name="email">
                         
                         <div class="form-group">
                             <textarea class="form-control form-control-lg">
-
 
                         <input type="submit" class="btn btn-secondary btn-block" value="Enviar" name="">
