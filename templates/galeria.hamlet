@@ -14,7 +14,7 @@
                 
 
                 <div class="col-lg-4 col-md-4 col-sm-12">
-                    <img src="images/portfolio/port3.png" class="img-fluid">
+                    <img src=@{StaticR img_friends_png} class="img-fluid">
                 
                 <div class="col-lg-4 col-md-4 col-sm-12">
                     <img src="images/portfolio/port11.png" class="img-fluid">
