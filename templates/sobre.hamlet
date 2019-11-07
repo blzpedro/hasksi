@@ -11,4 +11,4 @@
                     
                 <p class="description text-justify">Atualmente contamos com 2 jogadores.
             <div class="col-md-4 col-md-offset-1">
-                <img alt="" class="" src=@{StaticR img_player_jpg}>
+                
