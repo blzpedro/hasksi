@@ -100,8 +100,8 @@ getHomeR = do
         -- addScript (Static script_js) -> js interno
         -- 8aQZvtkO
         addStylesheet (StaticR css_bootstrap_css)
-        addScript  StaticR js_jquery_min_js
-        addScript  StaticR js_bootstrap_js
+        addScript $ StaticR js_jquery_min_js
+        addScript $ StaticR js_bootstrap_js
         toWidgetHead $(luciusFile "templates/adCSS.lucius")
         toWidgetHead $(juliusFile "templates/adScript.julius")
         toWidgetHead $(luciusFile "templates/main.lucius")

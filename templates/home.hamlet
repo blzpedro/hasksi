@@ -1,6 +1,6 @@
 <div class="section">
   <div class="">
-    <div class="image" style="background-image: url('@{StaticR img_bg_jpeg}')">
+    <div class="image" style="background-image: url('@{StaticR img_banner_jpeg}')">
 
     <div class="container">
       <div class="content">
