@@ -17,17 +17,17 @@
                     <img src=@{StaticR img_friends_png} class="img-fluid">
                 
                 <div class="col-lg-4 col-md-4 col-sm-12">
-                    <img src="images/portfolio/port11.png" class="img-fluid">
+                    <img src=@{StaticR img_Mirage_A_jpg} class="img-fluid">
                 
                 <div class="col-lg-4 col-md-4 col-sm-12">
-                    <img src="images/portfolio/electric.png" class="img-fluid">
+                    <img src=@{StaticR img_m4a4_rei_dragao_jpg} class="img-fluid">
                 
 
                 <div class="col-lg-4 col-md-4 col-sm-12">
-                    <img src="images/portfolio/Classic.jpg" class="img-fluid">
+                    <img src=@{StaticR img_ct_jpg} class="img-fluid">
                 
                 <div class="col-lg-4 col-md-4 col-sm-12">
-                    <img src="images/portfolio/port1.png" class="img-fluid">
+                    <img src=@{StaticR img_train_jpg} class="img-fluid">
                 
                 <div class="col-lg-4 col-md-4 col-sm-12">
-                    <img src="images/portfolio/port8.png" class="img-fluid">
+                    <img src=@{StaticR img_ct_tr_jpg} class="img-fluid">
