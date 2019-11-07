@@ -1,6 +1,7 @@
-<section id="sobre">
-    <div class="container">
-        <div class="row">
+<div class="sobre">
+        <h1 class="text-center">Sobre
+        <div class="container">
+            <div class="row">
             <div class="col-lg-8 mx-auto">
                 <h2>Quem somos nós:
                 <p class="lead">Haskellmilgrau CSGO</p>
