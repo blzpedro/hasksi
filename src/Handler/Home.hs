@@ -49,6 +49,17 @@ getGaleriaR = do
         toWidgetHead $(juliusFile "templates/adScript.julius")
         addStylesheet (StaticR css_bootstrap_css)
 
+getSobreR :: Handler Html
+getSobreR = do
+    defaultLayout $ do
+        addScriptRemote "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+        addScriptRemote "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        $(whamletFile "templates/sobre.hamlet")
+        toWidgetHead $(luciusFile "templates/main.lucius")
+        toWidgetHead $(juliusFile "templates/main.julius")        
+        toWidgetHead $(luciusFile "templates/adCSS.lucius")
+        toWidgetHead $(juliusFile "templates/adScript.julius")
+        addStylesheet (StaticR css_bootstrap_css)
 
 getAdsR :: Handler TypedContent
 getAdsR = return $ TypedContent "text/plain"
