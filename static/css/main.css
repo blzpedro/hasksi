@@ -91,6 +91,11 @@ a {
     color: #fff;
 }
 
+.cor-link{
+    color: white;
+    text-decoration: none;
+}
+
 .sobre {
     margin: 4em 0;
     padding: 1em;
