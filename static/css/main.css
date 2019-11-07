@@ -11,6 +11,10 @@ a {
     font-family: "Raleway";
 }
 
+a:hover{
+    color:black;
+}
+
 .navbar {
     background: #F97300;
 }
