@@ -106,7 +106,7 @@ getHomeR = do
         toWidgetHead $(juliusFile "templates/adScript.julius")
         toWidgetHead $(luciusFile "templates/main.lucius")
         toWidgetHead $(juliusFile "templates/main.julius")
-
+        
         [whamlet|
             <meta charset="UTF-8">
             <meta name="description" content="Site Haskellmilgrau">
@@ -114,3 +114,5 @@ getHomeR = do
         |]
         $(whamletFile "templates/header.hamlet")
         $(whamletFile "templates/home.hamlet")
+        
+        
