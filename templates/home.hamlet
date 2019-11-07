@@ -1,7 +1,7 @@
 <div class="section">
   <div class="">
     <div class="image">
-
+      <img src="img/banner.jpg"
     <div class="container">
       <div class="content">
         <div class="title">
@@ -27,7 +27,7 @@
 <div class="section">
   <div class="">
     <div class="image-section">
-
+      <img src="img/friends.png"
     <div class="container">
       <div class="content">
         <div class="row">
