@@ -51,7 +51,7 @@ a {
 }
 
 .header {
-    background-image: url('StaticR img_banner_jpg');
+    background-image: url('@{StaticR img_banner_jpg}');
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
