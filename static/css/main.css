@@ -51,6 +51,7 @@ a {
 }
 
 header img{
+    position: fixed;
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
