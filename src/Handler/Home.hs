@@ -17,12 +17,14 @@ getTimeR :: Handler Html
 getTimeR = do
     defaultLayout $ do
         addStylesheet (StaticR css_bootstrap_css)
+        addStylesheet (StaticR css_main_css)
         addScript $ StaticR js_jquery_min_js
         addScript $ StaticR js_bootstrap_js
         toWidgetHead $(luciusFile "templates/adCSS.lucius")
         toWidgetHead $(juliusFile "templates/adScript.julius")
-        toWidgetHead $(luciusFile "templates/main.lucius")
-        toWidgetHead $(juliusFile "templates/main.julius")
+        --toWidgetHead $(luciusFile "templates/main.lucius")
+        
+
         
         [whamlet|
             <meta charset="UTF-8">
@@ -36,12 +38,13 @@ getContatoR :: Handler Html
 getContatoR = do
     defaultLayout $ do
         addStylesheet (StaticR css_bootstrap_css)
+        addStylesheet (StaticR css_main_css)
         addScript $ StaticR js_jquery_min_js
         addScript $ StaticR js_bootstrap_js
         toWidgetHead $(luciusFile "templates/adCSS.lucius")
         toWidgetHead $(juliusFile "templates/adScript.julius")
-        toWidgetHead $(luciusFile "templates/main.lucius")
-        toWidgetHead $(juliusFile "templates/main.julius")
+        --toWidgetHead $(luciusFile "templates/main.lucius")
+
         
         [whamlet|
             <meta charset="UTF-8">
@@ -55,12 +58,13 @@ getGaleriaR :: Handler Html
 getGaleriaR = do
     defaultLayout $ do
         addStylesheet (StaticR css_bootstrap_css)
+        addStylesheet (StaticR css_main_css)
         addScript $ StaticR js_jquery_min_js
         addScript $ StaticR js_bootstrap_js
         toWidgetHead $(luciusFile "templates/adCSS.lucius")
         toWidgetHead $(juliusFile "templates/adScript.julius")
-        toWidgetHead $(luciusFile "templates/main.lucius")
-        toWidgetHead $(juliusFile "templates/main.julius")
+        --toWidgetHead $(luciusFile "templates/main.lucius")
+
         
         [whamlet|
             <meta charset="UTF-8">
@@ -74,12 +78,13 @@ getSobreR :: Handler Html
 getSobreR = do
     defaultLayout $ do
         addStylesheet (StaticR css_bootstrap_css)
+        addStylesheet (StaticR css_main_css)
         addScript $ StaticR js_jquery_min_js
         addScript $ StaticR js_bootstrap_js
         toWidgetHead $(luciusFile "templates/adCSS.lucius")
         toWidgetHead $(juliusFile "templates/adScript.julius")
-        toWidgetHead $(luciusFile "templates/main.lucius")
-        toWidgetHead $(juliusFile "templates/main.julius")
+        --toWidgetHead $(luciusFile "templates/main.lucius")
+
         
         [whamlet|
             <meta charset="UTF-8">
@@ -100,12 +105,13 @@ getHomeR = do
         -- addScript (Static script_js) -> js interno
         -- 8aQZvtkO
         addStylesheet (StaticR css_bootstrap_css)
+        addStylesheet (StaticR css_main_css)
         addScript $ StaticR js_jquery_min_js
         addScript $ StaticR js_bootstrap_js
         toWidgetHead $(luciusFile "templates/adCSS.lucius")
         toWidgetHead $(juliusFile "templates/adScript.julius")
-        toWidgetHead $(luciusFile "templates/main.lucius")
-        toWidgetHead $(juliusFile "templates/main.julius")
+        --toWidgetHead $(luciusFile "templates/main.lucius")
+
         
         [whamlet|
             <meta charset="UTF-8">
