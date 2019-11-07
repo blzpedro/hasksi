@@ -1,24 +1,4 @@
-<body>
-    <nav class="navbar navbar-expand-lg fixed-top ">
-        <a href=@{HomeR} class="navbar-brand">Haskellmilgrau
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon">
-        <div class="collapse navbar-collapse " id="navbarSupportedContent">
-            <ul class="navbar-nav mr-4">
-                <li class="nav-item">
-                    <a href=@{GaleriaR} class="nav-link" data-value="galeria">Galeria
-                
-                <li class="nav-item">
-                        <a href=@{SobreR} class="nav-link " data-value="sobre">Sobre
-                
-                <li class="nav-item">
-                    <a href=@{TimeR} class="nav-link " data-value="time">Time
-                
-                <li class="nav-item">
-                    <a href=@{ContatoR} class="nav-link " data-value="contato">Contato
-
-                
-    <!-- contato form -->
+<!-- contato form -->
     <div class="contato">
     <div class="contato-form">
         <div class="container">

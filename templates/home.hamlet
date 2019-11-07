@@ -1,19 +1,64 @@
-<body>
-    <nav class="navbar navbar-expand-lg fixed-top ">
-        <a href=@{HomeR} class="navbar-brand">Haskellmilgrau
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon">
-        <div class="collapse navbar-collapse " id="navbarSupportedContent">
-            <ul class="navbar-nav mr-4">
-                <li class="nav-item">
-                    <a href=@{GaleriaR} class="nav-link" data-value="galeria">Galeria
-                
-                <li class="nav-item">
-                        <a href=@{SobreR} class="nav-link " data-value="sobre">Sobre
-                
-                <li class="nav-item">
-                    <a href=@{TimeR} class="nav-link " data-value="time">Time
-                
-                <li class="nav-item">
-                    <a href=@{ContatoR} class="nav-link " data-value="contato">Contato
+<div class="section">
+  <div class="">
+    <div class="image" style="background-image: url('@{StaticR img_bg_jpeg}')">
+
+    <div class="container">
+      <div class="content">
+        <div class="title">
+          <h1 class="">Haskellmilgrau
+          <h3>Faça parte do nosso time.
+        <div class="">
+          <a href="#" target="_self" class="btn btn-lg ">Conheça mais
+
+
+<div class="section">
+  <div class="container">
+    <div class="row">
+      <div class="title">
+        <h2>Como fazer parte do nosso time?
+        <div class="separator separator-danger">
+        <p class="description text-justify">.
+        <p class="description text-justify">.
+        <p class="description text-justify">.
+        <p class="description text-justify">.
+        <p class="description text-justify">.
+        <p class="description text-justify">.
+
+<div class="section">
+  <div class="">
+    <div class="image" style="background-image:url('@{StaticR img_bg2_jpg}')">
+
+    <div class="container">
+      <div class="content">
+        <div class="row">
+          <div class="">
+            <h2>Nosso time
+            <div class="">
+            <p class="description">Formado por jogadores amadores.
+
+
+        <div class="team">
+          <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="card ">
+                    <div class="content">
+                      <div class="">
+                        <img alt="..." class="" src="#">
+
+                      <div class="description">
+                        <h3 class="title">gcR
+                        <p class="">Awper
+
+
+                <div class="col-md-6">
+                  <div class="card">
+                    <div class="content">
+                      <div class="">
+                        <img alt="..." class="" src="#">
+
+                      <div class="description">
+                        <h3 class="title">pdR
+                        <p class="">Rifler
 

@@ -1,18 +1,14 @@
-<body>
-    <nav class="navbar navbar-expand-lg fixed-top ">
-        <a href=@{HomeR} class="navbar-brand">Haskellmilgrau
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon">
-        <div class="collapse navbar-collapse " id="navbarSupportedContent">
-            <ul class="navbar-nav mr-4">
-                <li class="nav-item">
-                    <a href=@{GaleriaR} class="nav-link" data-value="galeria">Galeria
+<div class="section">
+    <div class="container">
+        <div class="">
+            <h2>Quem somos nós:
+        <div class="row">
+            <div class="col-md-4 col-md-offset-1">
+
+                <p class="description text-justify">O time Haskellmilgrau foi criado em 2019, na cidade de Santos, pelos jogadores gcR e pdR.
                 
-                <li class="nav-item">
-                        <a href=@{SobreR} class="nav-link " data-value="sobre">Sobre
-                
-                <li class="nav-item">
-                    <a href=@{TimeR} class="nav-link " data-value="time">Time
-                
-                <li class="nav-item">
-                    <a href=@{ContatoR} class="nav-link " data-value="contato">Contato
+                <p class="description text-justify">Nosso objetivo é apenas a diversão.
+                    
+                <p class="description text-justify">Atualmente contamos com 2 jogadores.
+            <div class="col-md-4 col-md-offset-1">
+                <img alt="" class="" src=@{StaticR img_player_jpg}>

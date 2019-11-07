@@ -16,50 +16,79 @@ import Database.Persist.Postgresql
 getTimeR :: Handler Html
 getTimeR = do
     defaultLayout $ do
-        addScriptRemote "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"
-        addScriptRemote "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        $(whamletFile "templates/time.hamlet")
-        toWidgetHead $(luciusFile "templates/main.lucius")
-        toWidgetHead $(juliusFile "templates/main.julius")        
+        addStylesheet (StaticR css_bootstrap_css)
+        addScript $ StaticR js_jquery_min_js
+        addScript $ StaticR js_bootstrap_js
         toWidgetHead $(luciusFile "templates/adCSS.lucius")
         toWidgetHead $(juliusFile "templates/adScript.julius")
-        addStylesheet (StaticR css_bootstrap_css)
+        toWidgetHead $(luciusFile "templates/main.lucius")
+        toWidgetHead $(juliusFile "templates/main.julius")
+        
+        [whamlet|
+            <meta charset="UTF-8">
+            <meta name="description" content="Site Haskellmilgrau">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+        |]
+        $(whamletFile "templates/header.hamlet")
+        $(whamletFile "templates/time.hamlet")
 
 getContatoR :: Handler Html
 getContatoR = do
     defaultLayout $ do
-        addScriptRemote "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"
-        addScriptRemote "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        $(whamletFile "templates/contato.hamlet")
-        toWidgetHead $(luciusFile "templates/main.lucius")
-        toWidgetHead $(juliusFile "templates/main.julius")        
+        addStylesheet (StaticR css_bootstrap_css)
+        addScript $ StaticR js_jquery_min_js
+        addScript $ StaticR js_bootstrap_js
         toWidgetHead $(luciusFile "templates/adCSS.lucius")
         toWidgetHead $(juliusFile "templates/adScript.julius")
-        addStylesheet (StaticR css_bootstrap_css)
+        toWidgetHead $(luciusFile "templates/main.lucius")
+        toWidgetHead $(juliusFile "templates/main.julius")
+        
+        [whamlet|
+            <meta charset="UTF-8">
+            <meta name="description" content="Site Haskellmilgrau">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+        |]
+        $(whamletFile "templates/header.hamlet")
+        $(whamletFile "templates/contato.hamlet")
 
 getGaleriaR :: Handler Html
 getGaleriaR = do
     defaultLayout $ do
-        addScriptRemote "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"
-        addScriptRemote "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        $(whamletFile "templates/galeria.hamlet")
-        toWidgetHead $(luciusFile "templates/main.lucius")
-        toWidgetHead $(juliusFile "templates/main.julius")
+        addStylesheet (StaticR css_bootstrap_css)
+        addScript $ StaticR js_jquery_min_js
+        addScript $ StaticR js_bootstrap_js
         toWidgetHead $(luciusFile "templates/adCSS.lucius")
         toWidgetHead $(juliusFile "templates/adScript.julius")
-        addStylesheet (StaticR css_bootstrap_css)
+        toWidgetHead $(luciusFile "templates/main.lucius")
+        toWidgetHead $(juliusFile "templates/main.julius")
+        
+        [whamlet|
+            <meta charset="UTF-8">
+            <meta name="description" content="Site Haskellmilgrau">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+        |]
+        $(whamletFile "templates/header.hamlet")
+        $(whamletFile "templates/galeria.hamlet")
 
 getSobreR :: Handler Html
 getSobreR = do
     defaultLayout $ do
-        addScriptRemote "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"
-        addScriptRemote "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        $(whamletFile "templates/sobre.hamlet")
-        toWidgetHead $(luciusFile "templates/main.lucius")
-        toWidgetHead $(juliusFile "templates/main.julius")        
+        addStylesheet (StaticR css_bootstrap_css)
+        addScript $ StaticR js_jquery_min_js
+        addScript $ StaticR js_bootstrap_js
         toWidgetHead $(luciusFile "templates/adCSS.lucius")
         toWidgetHead $(juliusFile "templates/adScript.julius")
-        addStylesheet (StaticR css_bootstrap_css)
+        toWidgetHead $(luciusFile "templates/main.lucius")
+        toWidgetHead $(juliusFile "templates/main.julius")
+        
+        [whamlet|
+            <meta charset="UTF-8">
+            <meta name="description" content="Site Haskellmilgrau">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+        |]
+        $(whamletFile "templates/header.hamlet")
+        $(whamletFile "templates/sobre.hamlet")
+        
 
 getAdsR :: Handler TypedContent
 getAdsR = return $ TypedContent "text/plain"
@@ -68,26 +97,20 @@ getAdsR = return $ TypedContent "text/plain"
 getHomeR :: Handler Html
 getHomeR = do
     defaultLayout $ do
-        addScriptRemote "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"
-        addScriptRemote "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         -- addScript (Static script_js) -> js interno
         -- 8aQZvtkO
-        $(whamletFile "templates/home.hamlet")
+        addStylesheet (StaticR css_bootstrap_css)
+        addScript $ StaticR js_jquery_min_js
+        addScript $ StaticR js_bootstrap_js
         toWidgetHead $(luciusFile "templates/adCSS.lucius")
         toWidgetHead $(juliusFile "templates/adScript.julius")
         toWidgetHead $(luciusFile "templates/main.lucius")
         toWidgetHead $(juliusFile "templates/main.julius")
-        addStylesheet (StaticR css_bootstrap_css)
-        toWidgetHead [julius|
-            function ola(){
-                alert("ola mundo");
-            }
-            
-        |]
-        toWidgetHead [lucius|
 
-        |]
-        
         [whamlet|
-
+            <meta charset="UTF-8">
+            <meta name="description" content="Site Haskellmilgrau">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
         |]
+        $(whamletFile "templates/header.hamlet")
+        $(whamletFile "templates/home.hamlet")
