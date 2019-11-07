@@ -114,6 +114,17 @@ a {
     color: #888;
 }
 
+/*home*/
+
+.image{
+    background-image: url('@{StaticR img_banner_jpg}');
+}
+
+.image-section{
+    background-image: url('@{StaticR img_friends_png}');
+}
+
+
 /*galeria*/
 .galeria {
     margin: 4em 0;
