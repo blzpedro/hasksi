@@ -112,7 +112,5 @@ getHomeR = do
             <meta name="description" content="Site Haskellmilgrau">
             <meta name="viewport" content="width=device-width, initial-scale=1">
         |]
-        $(whamletFile "img/banner.jpg")
-        $(whamletFile "img/friends.png")
         $(whamletFile "templates/header.hamlet")
         $(whamletFile "templates/home.hamlet")
