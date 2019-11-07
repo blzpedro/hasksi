@@ -1,13 +1,9 @@
-<div class="section">
+<section id="sobre">
     <div class="container">
-            <h2>Quem somos nós:
         <div class="row">
-            <div class="col-md-4 col-md-offset-1">
-
-                <p class="description text-justify">O time Haskellmilgrau foi criado em 2019, na cidade de Santos, pelos jogadores gcR e pdR.
-                
-                <p class="description text-justify">Nosso objetivo é apenas a diversão.
-                    
-                <p class="description text-justify">Atualmente contamos com 2 jogadores.
-            <div class="col-md-4 col-md-offset-1">
-                
+            <div class="col-lg-8 mx-auto">
+                <h2>Quem somos nós:
+                <p class="lead">Haskellmilgrau CSGO</p>
+                <ul>
+                    <li>O time Haskellmilgrau foi criado em 2019, na cidade de Santos, pelos jogadores gcR e pdR.
+                    <li>Nosso objetivo é apenas a diversão.
