@@ -1,64 +1,9 @@
-<div class="section">
-  <div class="">
-    <div class="image">
-      <img src="img/banner.jpg">
+<header class="header">
+    <div class="overlay">
     <div class="container">
-      <div class="content">
-        <div class="title">
-          <h1 class="">Haskellmilgrau
-          <h3>Faça parte do nosso time.
-        <div class="">
-          <a href="#" target="_self" class="btn btn-lg ">Conheça mais
+        <div class="description">
+            <h1>Haskellmilgrau CSGO
+                <p>Faça parte do nosso time de CSGO.
+                <button class="btn btn-outline-secondary btn-lg">Veja mais
 
-
-<div class="section">
-  <div class="container">
-    <div class="row">
-      <div class="title">
-        <h2>Como fazer parte do nosso time?
-        <div class="separator separator-danger">
-        <p class="description text-justify">.
-        <p class="description text-justify">.
-        <p class="description text-justify">.
-        <p class="description text-justify">.
-        <p class="description text-justify">.
-        <p class="description text-justify">.
-
-<div class="section">
-  <div class="">
-    <div class="image-section">
-      <img src="img/friends.png">
-    <div class="container">
-      <div class="content">
-        <div class="row">
-          <div class="">
-            <h2>Nosso time
-            <div class="">
-            <p class="description">Formado por jogadores amadores.
-
-
-        <div class="team">
-          <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="card ">
-                    <div class="content">
-                      <div class="">
-                        <img src="" alt="..." class="">
-
-                      <div class="description">
-                        <h3 class="title">gcR
-                        <p class="">Awper
-
-
-                <div class="col-md-6">
-                  <div class="card">
-                    <div class="content">
-                      <div class="">
-                        <img src="" alt="..." class="">
-
-                      <div class="description">
-                        <h3 class="title">pdR
-                        <p class="">Rifler
 

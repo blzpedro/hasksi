@@ -50,6 +50,21 @@ a {
     background-color: #007bff !important
 }
 
+.header {
+    background-image: url('../bg.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+.overlay {
+    position: absolute;
+    min-height: 100%;
+    min-width: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(244, 244, 244, 0.79);
+}
 
 .description {
     position: absolute;
@@ -113,9 +128,6 @@ a {
     line-height: 2;
     color: #888;
 }
-
-/*home*/
-
 
 /*galeria*/
 .galeria {
