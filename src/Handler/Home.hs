@@ -16,7 +16,7 @@ import Database.Persist.Postgresql
 getTimeR :: Handler Html
 getTimeR = do
     defaultLayout $ do
-        addStylesheet (StaticR css_bootstrap_css),
+        addStylesheet (StaticR css_bootstrap_css)
         addStylesheet (StaticR css_main_css)
         addScript $ StaticR js_jquery_min_js
         addScript $ StaticR js_bootstrap_js
@@ -37,7 +37,7 @@ getTimeR = do
 getContatoR :: Handler Html
 getContatoR = do
     defaultLayout $ do
-        addStylesheet (StaticR css_bootstrap_css),
+        addStylesheet (StaticR css_bootstrap_css)
         addStylesheet (StaticR css_main_css)
         addScript $ StaticR js_jquery_min_js
         addScript $ StaticR js_bootstrap_js
@@ -57,7 +57,7 @@ getContatoR = do
 getGaleriaR :: Handler Html
 getGaleriaR = do
     defaultLayout $ do
-        addStylesheet (StaticR css_bootstrap_css),
+        addStylesheet (StaticR css_bootstrap_css)
         addStylesheet (StaticR css_main_css)
         addScript $ StaticR js_jquery_min_js
         addScript $ StaticR js_bootstrap_js
@@ -77,7 +77,7 @@ getGaleriaR = do
 getSobreR :: Handler Html
 getSobreR = do
     defaultLayout $ do
-        addStylesheet (StaticR css_bootstrap_css),
+        addStylesheet (StaticR css_bootstrap_css)
         addStylesheet (StaticR css_main_css)
         addScript $ StaticR js_jquery_min_js
         addScript $ StaticR js_bootstrap_js
@@ -104,7 +104,7 @@ getHomeR = do
     defaultLayout $ do
         -- addScript (Static script_js) -> js interno
         -- 8aQZvtkO
-        addStylesheet (StaticR css_bootstrap_css),
+        addStylesheet (StaticR css_bootstrap_css)
         addStylesheet (StaticR css_main_css)
         addScript $ StaticR js_jquery_min_js
         addScript $ StaticR js_bootstrap_js
