@@ -1,10 +1,10 @@
-<header class="header">
-    <!-- <img src=@{StaticR img_banner_jpg} alt='csgo-banner'> -->
+<header>
+ <img src=@{StaticR img_banner_jpg} alt='csgo-banner'>
     <div class="overlay">
     <div class="container">
         <div class="description">
             <h1>Haskellmilgrau CSGO
                 <p>Faça parte do nosso time de CSGO.
-                <button class="btn btn-outline-secondary btn-lg"><a href=@{GaleriaR} class="cor-link">Veja mais
+                <button class="btn btn-outline-secondary btn-lg"><a href=@{GaleriaR} class="link">Veja mais
 
 

@@ -21,11 +21,11 @@ a {
     cursor: pointer;
 }
 
-.nav-link {
+.nav-link link{
     margin-right: 1em !important;
 }
 
-.nav-link:hover {
+.nav-link:hover link:hover{
     background: #f4f4f4;
     color: #f97300;
 }
@@ -50,8 +50,7 @@ a {
     background-color: #007bff !important
 }
 
-.header {
-    background-image: url('@{StaticR img_banner_jpg}');
+header {
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
@@ -89,11 +88,6 @@ a {
     border: 1px solid #F97300;
     background: #F97300;
     color: #fff;
-}
-
-.cor-link{
-    color: white;
-    text-decoration: none;
 }
 
 .sobre {
