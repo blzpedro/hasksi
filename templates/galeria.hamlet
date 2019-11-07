@@ -4,13 +4,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-md-4 col-sm-12">
-                    <img src="images/portfolio/port13.png" class="img-fluid">
+                    <img src=@{StaticR img_awp_asimov_jpg} class="img-fluid">
                 
                 <div class="col-lg-4 col-md-4 col-sm-12">
-                    <img src="images/portfolio/port1.png" class="img-fluid">
+                    <img src=@{StaticR img_ak_redline_jpg} class="img-fluid">
                 
                 <div class="col-lg-4 col-md-4 col-sm-12">
-                    <img src="images/portfolio/port6.png" class="img-fluid">
+                    <img src=@{StaticR img_csgo_mibr_jpg} class="img-fluid">
                 
 
                 <div class="col-lg-4 col-md-4 col-sm-12">
