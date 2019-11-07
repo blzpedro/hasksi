@@ -30,6 +30,7 @@ getTimeR = do
             <meta charset="UTF-8">
             <meta name="description" content="Site Haskellmilgrau">
             <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>Haskellmilgrau
         |]
         $(whamletFile "templates/header.hamlet")
         $(whamletFile "templates/time.hamlet")
@@ -50,6 +51,7 @@ getContatoR = do
             <meta charset="UTF-8">
             <meta name="description" content="Site Haskellmilgrau">
             <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>Haskellmilgrau
         |]
         $(whamletFile "templates/header.hamlet")
         $(whamletFile "templates/contato.hamlet")
@@ -70,6 +72,7 @@ getGaleriaR = do
             <meta charset="UTF-8">
             <meta name="description" content="Site Haskellmilgrau">
             <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>Haskellmilgrau
         |]
         $(whamletFile "templates/header.hamlet")
         $(whamletFile "templates/galeria.hamlet")
@@ -90,6 +93,7 @@ getSobreR = do
             <meta charset="UTF-8">
             <meta name="description" content="Site Haskellmilgrau">
             <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>Haskellmilgrau
         |]
         $(whamletFile "templates/header.hamlet")
         $(whamletFile "templates/sobre.hamlet")
@@ -117,6 +121,7 @@ getHomeR = do
             <meta charset="UTF-8">
             <meta name="description" content="Site Haskellmilgrau">
             <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>Haskellmilgrau
         |]
         $(whamletFile "templates/header.hamlet")
         $(whamletFile "templates/home.hamlet")
