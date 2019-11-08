@@ -28,7 +28,8 @@ getAlunoR = do
     defaultLayout $ do
     addSylesheet (StaticR css_bootstrap_css)
         [whamlet |
-              mensa <- msg
+              $maybe mensa < - msg
+              <div>
                     ^{mensa}
              
             <h1>

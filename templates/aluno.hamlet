@@ -19,3 +19,5 @@
                     #{show $ alunoDtNasc aluno}
                 <td>
                     <form method=post action=@{ApagarAlunoR aid}>
+                        <button>
+                            X
