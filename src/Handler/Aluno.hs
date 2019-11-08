@@ -41,16 +41,6 @@ getAlunoR = do
                     Cadastrar
         |]
 
-
-getListAlunoR :: Handler Html
-getListAlunoR = do
-    --select * from aluno order by aluno.nome
-        alunos <- runDB $ selectList [] [Asc AlunoNome]
-        defaultLayout $ do 
-        $(whamletFile "templates/alunos.hamlet")
-
-
-
 postAlunoR :: Handler Html 
 postAlunoR = do 
     ((result,_),_) <- runFormPost formAluno 
@@ -64,8 +54,15 @@ postAlunoR = do
             redirect AlunoR
         _ -> redirect HomeR
 
-postApagarAlunoR :: AlunoId -> Handler Html
-postApagarAlunoR aid = do
+getListAlunoR :: Handler Html 
+getListAlunoR = do 
+    -- select * from aluno order by aluno.nome
+    alunos <- runDB $ selectList [] [Asc AlunoNome]
+    defaultLayout $ do 
+        $(whamletFile "templates/alunos.hamlet")
+
+postApagarAlunoR :: AlunoId -> Handler Html 
+postApagarAlunoR aid = do 
     _ <- runDB $ get404 aid
-    runDB $ delete aid
-    redirect ListarAlunoR
+    runDB $ delete aid 
+    redirect ListAlunoR
