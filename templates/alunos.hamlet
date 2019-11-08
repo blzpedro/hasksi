@@ -14,7 +14,7 @@
                 <td>
                     #{alunoNome aluno}
                 <td>
-                    #{alunoRA aluno}
+                    #{alunoRa aluno}
                 <td>
                     #{show $ alunoDtNasc aluno}
                 <td>
