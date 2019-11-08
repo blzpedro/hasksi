@@ -51,18 +51,18 @@ getListAlunoR = do
 
 
 
-postAlunoR :: Handler Html
-postAlunoR = do
-    ((result,_),_) <- runFormPost formAluno
-    case result of
-        FormSucess aluno -> do
-        runDB $ insert aluno
-        setMessage [shamlet|
-            <h2>
-                Registro Incluido
-        ]
-        redirect AlunoR    
-    _ -> redirect HomeR
+postAlunoR :: Handler Html 
+postAlunoR = do 
+    ((result,_),_) <- runFormPost formAluno 
+    case result of 
+        FormSuccess aluno -> do 
+            runDB $ insert aluno 
+            setMessage [shamlet|
+                <h2>
+                    REGISTRO INCLUIDO
+            |]
+            redirect AlunoR
+        _ -> redirect HomeR
 
 postApagarAlunoR :: AlunoId -> Handler Html
 postApagarAlunoR aid = do
