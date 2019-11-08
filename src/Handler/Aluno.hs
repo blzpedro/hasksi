@@ -28,14 +28,14 @@ getAlunoR = do
     defaultLayout $ do
     addSylesheet (StaticR css_bootstrap_css)
         [whamlet |
-             mensa <- msg
+             $maybe mensa <- msg
                 <div>
                     ^{mensa}
-                    
+             
             <h1>
             CADASTRO DE ALUNO 
             
-            <form method=post action-@{AlunoR}>
+            <form method=post action=@{AlunoR}>
                 ^{widget}
                 <button>
                     Cadastrar
@@ -54,4 +54,8 @@ postAlunoR = do
         redirect AlunoR    
     _ -> redirect HomeR
 
-
+postApagarAlunoR :: AlunoId -> Handler Html
+postApagarAlunoR aid = do
+    _ <- runDB $ get404 aid
+    runDB $ delete aid
+    redirect ListarAlunoR

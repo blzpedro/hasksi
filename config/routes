@@ -12,3 +12,5 @@
 /contato ContatoR GET
 
 /aluno AlunoR GET POST
+/listar ListarAlunoR GET
+/aluno/#ALunoId/apagar ApagarAlunoR POST
