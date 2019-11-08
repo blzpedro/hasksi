@@ -1,22 +1,25 @@
 {-# LANGUAGE NoImplicitPrelude #-}
 {-# LANGUAGE OverloadedStrings #-}
 {-# LANGUAGE TemplateHaskell #-}
-{-# LANGUAGE QuasiQuotes #-}
 {-# LANGUAGE MultiParamTypeClasses #-}
+{-# LANGUAGE QuasiQuotes #-}
 {-# LANGUAGE TypeFamilies #-}
 module Handler.Aluno where
 
 import Import
+import Data.FileEmbed(embedFile)
 import Text.Lucius
 import Text.Julius
+--import Network.HTTP.Types.Status
 import Database.Persist.Postgresql
 
--- renderDivs
-formAluno :: Form Aluno 
-formAluno = renderBootstrap $ Aluno 
-    <$> areq textField "Nome: " Nothing 
-    <*> areq textField "RA: "   Nothing 
-    <*> areq dayField  "Data: " Nothing 
+
+formAluno :: Form Aluno
+formAluno = renderBootstrap $ Aluno
+    <$> areq textField "Nome: " Nothing
+    <*> areq textField "RA: " Nothing
+    <*> areq dayField "Data: " Nothing
+
 
 getAlunoR :: Handler Html 
 getAlunoR = do 
@@ -38,28 +41,31 @@ getAlunoR = do
                     Cadastrar
         |]
 
-postAlunoR :: Handler Html 
-postAlunoR = do 
-    ((result,_),_) <- runFormPost formAluno 
-    case result of 
-        FormSuccess aluno -> do 
-            runDB $ insert aluno 
-            setMessage [shamlet|
-                <h2>
-                    REGISTRO INCLUIDO
-            |]
-            redirect AlunoR
-        _ -> redirect HomeR
 
-getListAlunoR :: Handler Html 
-getListAlunoR = do 
-    -- select * from aluno order by aluno.nome
-    alunos <- runDB $ selectList [] [Asc AlunoNome]
-    defaultLayout $ do 
+getListAlunoR :: Handler Html
+getListAlunoR = do
+    --select * from aluno order by aluno.nome
+        alunos <- runDB $ selectList [] [Asc AlunoNome]
+        defaultLayout $ do 
         $(whamletFile "templates/alunos.hamlet")
 
-postApagarAlunoR :: AlunoId -> Handler Html 
-postApagarAlunoR aid = do 
+
+
+postAlunoR :: Handler Html
+postAlunoR = do
+    ((result,_),_) <- runFormPost formAluno
+    case result of
+        FormSucess aluno -> do
+        runDB $ insert aluno
+        setMessage [shamlet|
+            <h2>
+                Registro Incluido
+        ]
+        redirect AlunoR    
+    _ -> redirect HomeR
+
+postApagarAlunoR :: AlunoId -> Handler Html
+postApagarAlunoR aid = do
     _ <- runDB $ get404 aid
-    runDB $ delete aid 
-    redirect ListAlunoR
+    runDB $ delete aid
+    redirect ListarAlunoR
