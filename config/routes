@@ -13,4 +13,4 @@
 
 /aluno AlunoR GET POST
 /listar ListarAlunoR GET
-/aluno/#ALunoId/apagar ApagarAlunoR POST
+/aluno/#AlunoId/apagar ApagarAlunoR POST
