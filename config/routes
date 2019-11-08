@@ -11,4 +11,4 @@
 /time TimeR GET
 /contato ContatoR GET
 
-/aluno alunoR GET POST
+/aluno AlunoR GET POST
