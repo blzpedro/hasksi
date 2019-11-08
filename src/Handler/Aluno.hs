@@ -29,7 +29,6 @@ getAlunoR = do
     addSylesheet (StaticR css_bootstrap_css)
         [whamlet |
               mensa <- msg
-                <div>
                     ^{mensa}
              
             <h1>
@@ -40,6 +39,16 @@ getAlunoR = do
                 <button>
                     Cadastrar
         |]
+
+
+getListAlunoR :: Handler Html
+getListAlunoR = do
+    --select * from aluno order by aluno.nome
+        alunos <- runDB $ selectList [] [Asc AlunoNome]
+        defaultLayout $ do 
+        $(whamletFile "templates/alunos.hamlet")
+
+
 
 postAlunoR :: Handler Html
 postAlunoR = do
