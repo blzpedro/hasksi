@@ -151,15 +151,6 @@ getHomeR = do
             <div>
                 <h1>
                     OLA MUNDO
-            
-            <ul>
-                -- <li>
-                --     <a href=@{Page1R}>
-                --         Pagina 1
-                
-                -- <li>
-                --     <a href=@{Page2R}>
-                --         Pagina 2
                 
                 $maybe nome <- sess
                     <li>
