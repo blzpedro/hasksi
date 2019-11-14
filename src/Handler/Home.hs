@@ -105,6 +105,7 @@ getAdsR = return $ TypedContent "text/plain"
 
 getHomeR :: Handler Html
 getHomeR = do
+    sess <- lookupSession "_NOME"
     defaultLayout $ do
         -- addScript (Static script_js) -> js interno
         -- 8aQZvtkO
@@ -125,5 +126,16 @@ getHomeR = do
         |]
         $(whamletFile "templates/header.hamlet")
         $(whamletFile "templates/home.hamlet")
+        $maybe nome <- sess
+                    <li>
+                        <div>
+                            Ola #{nome}
+                        <form method=post action=@{SairR}>
+                            <input type="submit" value="Sair">
+                $nothing
+                    <li>
+                        <div>
+                            convidado
+                
         
         

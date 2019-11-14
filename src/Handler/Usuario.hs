@@ -57,3 +57,11 @@ postUsuarioR = do
                 |]
                 redirect UsuarioR
         _ -> redirect HomeR
+
+
+getAdminR :: Handler Html
+getAdminR = do 
+    defaultLayout [whamlet|
+        <h1>
+            BEM-VINDO MEU REI!
+    |]
