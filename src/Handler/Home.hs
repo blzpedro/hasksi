@@ -105,25 +105,63 @@ getAdsR = return $ TypedContent "text/plain"
 
 getHomeR :: Handler Html
 getHomeR = do
-    defaultLayout $ do
-        sess <- lookupSession "_NOME"
-        -- addScript (Static script_js) -> js interno
-        -- 8aQZvtkO
-        addStylesheet (StaticR css_bootstrap_css)
-        addStylesheet (StaticR css_main_css)
-        addScript $ StaticR js_jquery_min_js
-        addScript $ StaticR js_bootstrap_js
-        toWidgetHead $(luciusFile "templates/adCSS.lucius")
-        toWidgetHead $(juliusFile "templates/adScript.julius")
-        --toWidgetHead $(luciusFile "templates/main.lucius")
+    -- defaultLayout $ do
+    --     sess <- lookupSession "_NOME"
+    --     -- addScript (Static script_js) -> js interno
+    --     -- 8aQZvtkO
+    --     addStylesheet (StaticR css_bootstrap_css)
+    --     addStylesheet (StaticR css_main_css)
+    --     addScript $ StaticR js_jquery_min_js
+    --     addScript $ StaticR js_bootstrap_js
+    --     toWidgetHead $(luciusFile "templates/adCSS.lucius")
+    --     toWidgetHead $(juliusFile "templates/adScript.julius")
+    --     --toWidgetHead $(luciusFile "templates/main.lucius")
 
         
+    --     [whamlet|
+    --         <meta charset="UTF-8">
+    --         <meta name="description" content="Site Haskellmilgrau">
+    --         <meta name="viewport" content="width=device-width, initial-scale=1">
+    --         <title>Haskellmilgrau
+    --     |]
+    --     $(whamletFile "templates/header.hamlet")
+    --     $(whamletFile "templates/home.hamlet")
+    defaultLayout $ do 
+        -- remoto
+        addScriptRemote "https://code.jquery.com/jquery-3.4.1.min.js"
+        -- esta no projeto
+        addStylesheet (StaticR css_bootstrap_css)
+        sess <- lookupSession "_NOME"
+        toWidgetHead [julius|
+            function ola(){
+                alert("OLA MUNDO");
+            }
+        |]
+        toWidgetHead [lucius|
+            h1 {
+                color : red;
+            }
+            
+            ul {
+                display: inline;
+                list-style: none;
+            }
+        |]
         [whamlet|
-            <meta charset="UTF-8">
-            <meta name="description" content="Site Haskellmilgrau">
-            <meta name="viewport" content="width=device-width, initial-scale=1">
-            <title>Haskellmilgrau
-            $maybe nome <- sess
+            <div>
+                <h1>
+                    OLA MUNDO
+            
+            <ul>
+                <li>
+                    <a href=@{Page1R}>
+                        Pagina 1
+                
+                <li>
+                    <a href=@{Page2R}>
+                        Pagina 2
+                
+                $maybe nome <- sess
                     <li>
                         <div>
                             Ola #{nome}
@@ -133,9 +171,12 @@ getHomeR = do
                     <li>
                         <div>
                             convidado
+            
+            <img src=@{StaticR citeg_jpg}>
+            
+            <button class="btn btn-danger" onclick="ola()">
+                OK
         |]
-        $(whamletFile "templates/header.hamlet")
-        $(whamletFile "templates/home.hamlet")
         
                 
         
