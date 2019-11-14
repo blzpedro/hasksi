@@ -11,6 +11,6 @@
 /time TimeR GET
 /contato ContatoR GET
 
-/aluno   AlunoR GET POST
-/listar  ListAlunoR GET 
+/aluno AlunoR GET POST
+/listar ListarAlunoR GET
 /aluno/#AlunoId/apagar ApagarAlunoR POST
