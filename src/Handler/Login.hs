@@ -12,17 +12,14 @@ import Text.Lucius
 import Text.Julius
 import Database.Persist.Postgresql
 
-formUsu :: Form (Usuario, Text)
-formUsu = renderBootstrap $ (,)
-    <$> (Usuario 
-        <$> areq textField "Nome: " Nothing
-        <*> areq emailField "E-mail: " Nothing
-        <*> areq passwordField "Senha: " Nothing)
-    <*> areq passwordField "Digite Novamente: " Nothing
-    
-getUsuarioR :: Handler Html
-getUsuarioR = do 
-    (widget,_) <- generateFormPost formUsu
+formLogin :: Form (Text, Text)
+formLogin = renderBootstrap $ (,)
+    <$> areq emailField "E-mail: " Nothing
+    <*> areq passwordField "Senha: " Nothing
+
+getEntrarR :: Handler Html
+getEntrarR = do 
+    (widget,_) <- generateFormPost formLogin
     msg <- getMessage
     defaultLayout $ 
         [whamlet|
@@ -31,29 +28,50 @@ getUsuarioR = do
                     ^{mensa}
             
             <h1>
-                CADASTRO DE USUARIO
+                ENTRAR
             
-            <form method=post action=@{UsuarioR}>
+            <form method=post action=@{EntrarR}>
                 ^{widget}
-                <input type="submit" value="Cadastrar">
+                <input type="submit" value="Entrar">
         |]
-        
-postUsuarioR :: Handler Html
-postUsuarioR = do 
-    ((result,_),_) <- runFormPost formUsu
+
+postEntrarR :: Handler Html
+postEntrarR = do 
+    ((result,_),_) <- runFormPost formLogin
     case result of 
-        FormSuccess (usuario,veri) -> do 
-            if (usuarioSenha usuario == veri) then do 
-                runDB $ insert usuario 
-                setMessage [shamlet|
-                    <div>
-                        USUARIO INCLUIDO
-                |]
-                redirect UsuarioR
-            else do 
-                setMessage [shamlet|
-                    <div>
-                        SENHA E VERIFICACAO N CONFEREM
-                |]
-                redirect UsuarioR
+        FormSuccess ("root@root.com","root125") -> do 
+            setSession "_NOME" "admin"
+            redirect AdminR
+        FormSuccess (email,senha) -> do 
+           -- select * from usuario where email=digitado.email
+           usuario <- runDB $ getBy (UniqueEmailRest email)
+           case usuario of 
+                Nothing -> do 
+                    setMessage [shamlet|
+                        <div>
+                            E-mail N ENCONTRADO!
+                    |]
+                    redirect EntrarR
+                Just (Entity _ usu) -> do 
+                    if (usuarioSenha usu == senha) then do
+                        setSession "_NOME" (usuarioNome usu)
+                        redirect HomeR
+                    else do 
+                        setMessage [shamlet|
+                            <div>
+                                Senha INCORRETA!
+                        |]
+                        redirect EntrarR 
         _ -> redirect HomeR
+
+postSairR :: Handler Html 
+postSairR = do 
+    deleteSession "_NOME"
+    redirect HomeR
+
+getAdminR :: Handler Html
+getAdminR = do 
+    defaultLayout [whamlet|
+        <h1>
+            BEM-VINDO MEU REI!
+    |]
