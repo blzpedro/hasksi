@@ -1,23 +1,17 @@
-<table>
-    <thead>
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">Nome
+      <th scope="col">RA
+      <th scope="col">Data de Nascimento
+
+  <tbody>
+    $forall Entity aid aluno <- alunos
         <tr>
-            <th>
-                NOME
-            <th>
-                RA
-            <th>
-                DATA NASC
-            <th>
-    <tbody>
-        $forall Entity aid aluno <- alunos
-            <tr>
-                <td>
-                    #{alunoNome aluno}
-                <td>
-                    #{alunoRa aluno}
-                <td>
-                    #{show $ alunoDtNasc aluno}
-                <td>
-                    <form method=post action=@{ApagarAlunoR aid}>
-                        <button>
+          <td>#{alunoNome aluno}
+          <td>#{alunoRa aluno}
+          <td>#{show $ alunoDtNasc aluno}
+          <td>
+            <form method=post action=@{ApagarAlunoR aid}>
+                <button>
                             X
