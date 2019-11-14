@@ -3,3 +3,11 @@ Aluno
     ra     Text
     dtNasc Day
     deriving Show
+    
+    
+Usuario
+    nome Text
+    email Text
+    senha Text
+    UniqueEmailIx email
+    deriving Show

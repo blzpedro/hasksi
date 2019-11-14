@@ -40,7 +40,7 @@ import System.Log.FastLogger                (defaultBufSize, newStdoutLoggerSet,
 import Handler.Common
 import Handler.Home
 import Handler.Aluno  
-
+import Handler.Usuario
 
 -- Aqui 
 
