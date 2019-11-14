@@ -123,10 +123,7 @@ getHomeR = do
             <meta name="description" content="Site Haskellmilgrau">
             <meta name="viewport" content="width=device-width, initial-scale=1">
             <title>Haskellmilgrau
-        |]
-        $(whamletFile "templates/header.hamlet")
-        $(whamletFile "templates/home.hamlet")
-        $maybe nome <- sess
+            $maybe nome <- sess
                     <li>
                         <div>
                             Ola #{nome}
@@ -136,6 +133,10 @@ getHomeR = do
                     <li>
                         <div>
                             convidado
+        |]
+        $(whamletFile "templates/header.hamlet")
+        $(whamletFile "templates/home.hamlet")
+        
                 
         
         
