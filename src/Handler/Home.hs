@@ -106,7 +106,7 @@ getAdsR = return $ TypedContent "text/plain"
 getHomeR :: Handler Html
 getHomeR = do
     defaultLayout $ do
-    sess <- lookupSession "_NOME"
+        sess <- lookupSession "_NOME"
         -- addScript (Static script_js) -> js interno
         -- 8aQZvtkO
         addStylesheet (StaticR css_bootstrap_css)
