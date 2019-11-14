@@ -4,7 +4,7 @@
 {-# LANGUAGE MultiParamTypeClasses #-}
 {-# LANGUAGE QuasiQuotes #-}
 {-# LANGUAGE TypeFamilies #-}
-module Handler.Usuario where
+module Handler.Login where
 
 import Import
 import Data.FileEmbed(embedFile)
