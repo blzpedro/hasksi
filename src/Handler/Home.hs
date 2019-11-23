@@ -134,7 +134,7 @@ getHomeR = do
         sess <- lookupSession "_NOME"
         toWidgetHead [julius|
             function ola(){
-                alert("OLA MUNDOaa");
+                alert("OLA MUNDO");
             }
         |]
         toWidgetHead [lucius|
