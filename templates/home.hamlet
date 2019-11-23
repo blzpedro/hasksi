@@ -5,6 +5,6 @@
         <div class="description">
             <h1>Haskellmilgrau CSGO
                 <p>Faça parte do nosso time de CSGO.
-                <a href=@{ContatoR} class="link" style="color: black;padding: 10px; background-color: orange;">Veja mais
+            <a href=@{ContatoR} class="link" style="color: black;padding: 10px; background-color: orange;">Veja mais
 
 
