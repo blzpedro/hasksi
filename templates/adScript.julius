@@ -1,4 +1,4 @@
-    var elem = document.createElement('script');
+var elem = document.createElement('script');
     elem.src = 'https://quantcast.mgr.consensu.org/cmp.js';
     elem.async = true;
     elem.type = "text/javascript";
