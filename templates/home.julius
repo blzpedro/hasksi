@@ -8,10 +8,10 @@ $(document).ready(function() {
 
   function gerarFrases() {
     do {
-      var frases = ["idea1",
-          "idea2",
-          "idea3",
-          "idea4"
+      var frases = ["O medo é o caminho para o lado negro.",
+          "Faça ou não faça.",
+          "Que a Força esteja com você!",
+          "O medo leva à raiva, a raiva leva ao ódio e o ódio leva ao sofrimento."
         ]
 
       var randomArrayPosition = Math.floor(Math.random() * frases.length);
