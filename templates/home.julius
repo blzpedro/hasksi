@@ -11,7 +11,9 @@ $(document).ready(function() {
       var frases = ["O medo é o caminho para o lado negro.",
           "Faça ou não faça.",
           "Que a Força esteja com você!",
-          "O medo leva à raiva, a raiva leva ao ódio e o ódio leva ao sofrimento."
+          "O medo leva à raiva, a raiva leva ao ódio e o ódio leva ao sofrimento.",
+          "Vamos colocar um sorriso nesse rosto.",
+          "O que não nos mata nos torna estranhos."
         ]
 
       var randomArrayPosition = Math.floor(Math.random() * frases.length);
