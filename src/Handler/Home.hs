@@ -34,7 +34,7 @@ getHomeR = do
         setTitle "HaskellMilGrau"
         $(whamletFile "templates/header.hamlet")
         $(whamletFile "templates/home.hamlet")
-        sess <- lookupSession "_NOME"
+    -- sess <- lookupSession "_NOME"
     -- addScript (Static script_js) -> js interno
     -- 8aQZvtkO
     -- defaultLayout $ do 
