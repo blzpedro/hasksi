@@ -1,0 +1,25 @@
+$(document).ready(function() {
+  var fraseNova = "";
+
+  $(".btn-danger").click(function() {
+    $(".string-field").html(gerarFrases());
+    fraseNova = $(".string-field").html();
+  });
+
+  function gerarFrases() {
+    do {
+      var frases = ["idea1",
+          "idea2",
+          "idea3",
+          "idea4"
+        ]
+
+      var randomArrayPosition = Math.floor(Math.random() * frases.length);
+      var frase = frases[randomArrayPosition];
+
+    } while (frase === fraseNova)
+
+    return frase;
+  }
+
+});
