@@ -5,13 +5,8 @@
         <div class="collapse navbar-collapse " id="navbarSupportedContent">
             <ul class="navbar-nav mr-4">
                 <li class="nav-item">
-                    <a href=@{GaleriaR} class="nav-link" data-value="galeria">Galeria
+                    <a href=@{LoginR} class="nav-link" data-value="galeria">Login
                 
                 <li class="nav-item">
-                        <a href=@{SobreR} class="nav-link " data-value="sobre">Sobre
+                        <a href=@{CadastroR} class="nav-link " data-value="sobre">Cadastro
                 
-                <li class="nav-item">
-                    <a href=@{TimeR} class="nav-link " data-value="time">Time
-                
-                <li class="nav-item">
-                    <a href=@{ContatoR} class="nav-link " data-value="contato">Contato

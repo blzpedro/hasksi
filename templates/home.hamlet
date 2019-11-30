@@ -1,10 +1,6 @@
-<header>
- <img src=@{StaticR img_banner_jpg} alt='csgo-banner'>
-    <div class="overlay">
-    <div class="container">
-        <div class="description">
-            <h1>Haskellmilgrau CSGO
-                <p>Faça parte do nosso time de CSGO.
-            <a href=@{ContatoR} class="link" style="color: black;padding: 10px; background-color: orange;">Veja mais
-
+<div .body>
+    <div>
+        <h1>HaskellMilGrau - Frases aleatórias
+        <button #btn-random>Clique aqui e gere sua frase!
+        <div .string-field>
 
