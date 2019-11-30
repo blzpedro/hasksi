@@ -142,3 +142,9 @@ body {
     height: 75px;
     margin: 30px 0;
 }
+
+.title{
+    text-align: center;
+    font-weight: bold;
+    color: white;
+}
