@@ -2,6 +2,6 @@
     <div>
         <h1>HaskellMilGrau - Frases aleatórias
         <div .logo-image></div>
-        <button #btn-random .btn-danger>Clique aqui e gere sua frase!
+        <button #btn-random .btn-danger>Clique aqui <br> gere sua frase!
         <div .string-field>
 
