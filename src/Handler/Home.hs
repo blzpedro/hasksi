@@ -18,11 +18,9 @@ getTimeR = do
     defaultLayout $ do
         addStylesheet (StaticR css_bootstrap_css)
         addStylesheet (StaticR css_main_css)
+        setTitle "HaskellMilGrau"
         addScript $ StaticR js_jquery_min_js
         addScript $ StaticR js_bootstrap_js
-        toWidgetHead $(luciusFile "templates/adCSS.lucius")
-        toWidgetHead $(juliusFile "templates/adScript.julius")
-        toWidgetHead $(luciusFile "templates/head.hamlet")
         $(whamletFile "templates/header.hamlet")
         $(whamletFile "templates/time.hamlet")
 
@@ -33,9 +31,6 @@ getContatoR = do
         addStylesheet (StaticR css_main_css)
         addScript $ StaticR js_jquery_min_js
         addScript $ StaticR js_bootstrap_js
-        toWidgetHead $(luciusFile "templates/adCSS.lucius")
-        toWidgetHead $(juliusFile "templates/adScript.julius")
-        toWidgetHead $(luciusFile "templates/head.hamlet")
         $(whamletFile "templates/header.hamlet")
         $(whamletFile "templates/contato.hamlet")
 
@@ -46,9 +41,7 @@ getGaleriaR = do
         addStylesheet (StaticR css_main_css)
         addScript $ StaticR js_jquery_min_js
         addScript $ StaticR js_bootstrap_js
-        toWidgetHead $(luciusFile "templates/adCSS.lucius")
-        toWidgetHead $(juliusFile "templates/adScript.julius")
-        toWidgetHead $(luciusFile "templates/head.hamlet")
+        setTitle "HaskellMilGrau"
         $(whamletFile "templates/header.hamlet")
         $(whamletFile "templates/galeria.hamlet")
 
@@ -59,9 +52,7 @@ getSobreR = do
         addStylesheet (StaticR css_main_css)
         addScript $ StaticR js_jquery_min_js
         addScript $ StaticR js_bootstrap_js
-        toWidgetHead $(luciusFile "templates/adCSS.lucius")
-        toWidgetHead $(juliusFile "templates/adScript.julius")
-        toWidgetHead $(luciusFile "templates/head.hamlet")
+        setTitle "HaskellMilGrau"
         $(whamletFile "templates/header.hamlet")
         $(whamletFile "templates/sobre.hamlet")
         
@@ -80,9 +71,7 @@ getHomeR = do
         addStylesheet (StaticR css_main_css)
         addScript $ StaticR js_jquery_min_js
         addScript $ StaticR js_bootstrap_js
-        toWidgetHead $(luciusFile "templates/adCSS.lucius")
-        toWidgetHead $(juliusFile "templates/adScript.julius")
-        toWidgetHead $(luciusFile "templates/head.hamlet")
+        setTitle "HaskellMilGrau"
         $(whamletFile "templates/header.hamlet")
         $(whamletFile "templates/home.hamlet")
     -- defaultLayout $ do 
