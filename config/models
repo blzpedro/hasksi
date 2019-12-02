@@ -11,3 +11,7 @@ Usuario
     senha Text
     UniqueEmailIx email
     deriving Show
+    
+Frases 
+    frase Text
+    deriving Show
