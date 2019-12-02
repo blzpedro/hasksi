@@ -161,6 +161,7 @@ body {
     height: 200px;
     vertical-align: middle;
     border: white 3px solid;
+    display: table;
 }
 
 .string-field span{
