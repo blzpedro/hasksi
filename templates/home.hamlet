@@ -4,4 +4,5 @@
         <div .logo-image></div>
         <button #btn-random .btn-danger>Clique aqui <br> gere sua frase!
         <div .string-field>
+            <span>
 
