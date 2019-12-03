@@ -1,4 +1,4 @@
-maybe mensa <- msg 
+$maybe mensa <- msg 
     <div>
         ^{mensa}
     
