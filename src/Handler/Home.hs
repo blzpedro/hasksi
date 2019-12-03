@@ -29,7 +29,7 @@ getHomeR = do
         $(whamletFile "templates/header.hamlet")
         $(whamletFile "templates/home.hamlet")
         toWidget $(juliusFile "templates/home.julius")
-        $(widgetFile "rawsql")
+        $(widgetFile "Home")
     -- addScript (Static script_js) -> js interno
     -- 8aQZvtkO
     -- defaultLayout $ do 
