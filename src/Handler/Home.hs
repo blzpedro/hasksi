@@ -20,11 +20,8 @@ import Database.Esqueleto as E
 
 getHomeR :: Handler Html
 getHomeR = do
-    frase <- runDB $
-        E.select $
-        E.from $ \frases -> do
-        E.limit 1
-        return FrasesFrase
+    frase <- runDB  $ 
+        select FrasesFrase [] $ 1
         
     -- frases <- runDB $ rawSql "select 'frase' from 'frases' ORDER BY random() limit 1" []
     defaultLayout $ do
