@@ -21,7 +21,7 @@ import Database.Esqueleto as E
 getHomeR :: Handler Html
 getHomeR = do
     
-    frases <- runDB $ rawSql "select frase' from 'frases' ORDER BY random() limit 1" [Frases]
+    frases <- runDB $ rawSql "select frase from frases ORDER BY random() limit 1" [FrasesFrase]
     
     defaultLayout $ do
         sess <- lookupSession "_NOME"
