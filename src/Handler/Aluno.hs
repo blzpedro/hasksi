@@ -60,7 +60,7 @@ getListAlunoR = do
     -- select * from aluno order by aluno.nome
     alunos <- runDB $ selectList [] [Asc AlunoNome]
     defaultLayout $ do 
-        $(whamletFile "templates/header.hamlet")
+        -- $(whamletFile "templates/header.hamlet")
         addStylesheet (StaticR css_bootstrap_css)
         $(whamletFile "templates/alunos.hamlet")
 
