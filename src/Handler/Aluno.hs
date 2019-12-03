@@ -29,6 +29,7 @@ getAlunoR = do
         sess <- lookupSession "_NOME"
         $(whamletFile "templates/header.hamlet")
         addStylesheet (StaticR css_bootstrap_css)
+        addStylesheet (StaticR css_main_css)
         [whamlet|
             $maybe mensa <- msg
                 <div>
