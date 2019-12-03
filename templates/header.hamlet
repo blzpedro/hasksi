@@ -9,11 +9,11 @@
                         <a href=@{SobreR} class="nav-link " data-value="sobre">Sobre
                             
                     <li class="nav-item">
-                        <form action=@{SairR} method=post name=sair>
-                            <a href=@{LoginR}>Sair
+                        <a href="javascript:logout.submit();">Sair
                             
                 $nothing      
                     <li class="nav-item">
+                        <form action=@{SairR} method=post name=sair>
                         <a href=@{EntrarR} class="nav-link" data-value="login">Login
                     
                     <li class="nav-item">
