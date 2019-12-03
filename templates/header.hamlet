@@ -6,7 +6,7 @@
             <ul class="navbar-nav mr-4">
                 $maybe _ <- sess
                     <li class="nav-item">
-                            <a href=@{SobreR} class="nav-link " data-value="sobre">Sobre
+                        <a href=@{SobreR} class="nav-link " data-value="sobre">Sobre
                             
                     <li class="nav-item">
                         <form action=@{SairR} method=post name=sair>
