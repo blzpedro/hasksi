@@ -24,7 +24,7 @@ getUsuarioR :: Handler Html
 getUsuarioR = do 
     (widget,_) <- generateFormPost formUsu
     msg <- getMessage
-    defaultLayout $ 
+    defaultLayout $ do
         sess <- lookupSession "_NOME"
         $(whamletFile "templates/header.hamlet")
         addStylesheet (StaticR css_bootstrap_css)
