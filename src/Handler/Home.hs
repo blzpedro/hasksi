@@ -18,7 +18,7 @@ getHomeR :: Handler Html
 getHomeR = do
     defaultLayout $ do
         sess <- lookupSession "_NOME"
-        $maybe _ <- sess
+        $maybe _ <- sess $ do
             $(whamletFile "templates/login.hamlet")
         $nothing
             addStylesheet (StaticR css_bootstrap_css)
