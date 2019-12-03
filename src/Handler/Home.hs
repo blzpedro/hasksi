@@ -20,7 +20,8 @@ import Database.Persist.Sql (rawSql)
 getHomeR :: Handler Html
 getHomeR = do
     defaultLayout $ do
-        frases <- runDB $ rawSql "select "frase" from "frases" ORDER BY random() limit 1" []
+        sess <- lookupSession "_NOME"
+        frases <- runDB $ rawSql "select 'frase' from 'frases' ORDER BY random() limit 1" []
         addStylesheet (StaticR css_bootstrap_css)
         addStylesheet (StaticR css_main_css)
         addScript $ StaticR js_jquery_min_js
