@@ -13,16 +13,21 @@ import Text.Julius
 --import Network.HTTP.Types.Status
 import Database.Persist.Postgresql
 import Database.Persist.Sql (rawSql)
-import Database.Esqueleto as E
+import qualified Database.Esqueleto as E
+import           Database.Esqueleto ((^.))    
 
 
 -- randomPhrase -> select "frase" from "frases" ORDER BY random() limit 1;
 
 getHomeR :: Handler Html
 getHomeR = do
-    
-    frases <- runDB $ rawSql "select frase from frases ORDER BY random() limit 1" [FrasesFrase]
-    
+    frase <- runDB $
+        E.select $
+        E.from $ \frases -> do
+        E.limit 1
+        return frases ^. FrasesFrase
+        
+    -- frases <- runDB $ rawSql "select 'frase' from 'frases' ORDER BY random() limit 1" []
     defaultLayout $ do
         sess <- lookupSession "_NOME"
         addStylesheet (StaticR css_bootstrap_css)
