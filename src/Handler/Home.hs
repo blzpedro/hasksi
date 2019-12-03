@@ -4,7 +4,7 @@
 {-# LANGUAGE MultiParamTypeClasses #-}
 {-# LANGUAGE QuasiQuotes #-}
 {-# LANGUAGE TypeFamilies #-}
-module Handler.Sobre where
+module Handler.Home where
 
 import Import
 import Data.FileEmbed(embedFile)
@@ -24,7 +24,18 @@ getSobreR = do
         setTitle "HaskellMilGrau"
         $(whamletFile "templates/header.hamlet")
         $(whamletFile "templates/sobre.hamlet")
-        
+
+getHomeR :: Handler Html
+getHomeR = do
+    defaultLayout $ do
+        addStylesheet (StaticR css_bootstrap_css)
+        addStylesheet (StaticR css_main_css)
+        addScript $ StaticR js_jquery_min_js
+        addScript $ StaticR js_bootstrap_js
+        setTitle "HaskellMilGrau"
+        $(whamletFile "templates/header.hamlet")
+        $(whamletFile "templates/home.hamlet")
+        toWidget $(juliusFile "templates/home.julius")
     --sess <- lookupSession "_NOME"
     -- addScript (Static script_js) -> js interno
     -- 8aQZvtkO
