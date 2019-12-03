@@ -58,8 +58,8 @@ postEntrarR = do
                         redirect EntrarR 
         _ -> redirect HomeR
 
-postSairR :: Handler Html 
-postSairR = do 
+getSairR :: Handler Html 
+getSairR = do 
     deleteSession "_NOME"
     redirect HomeR
 

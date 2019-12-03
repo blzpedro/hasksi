@@ -13,6 +13,6 @@
 
 /cadastrar UsuarioR GET POST
 /entrar EntrarR GET POST
-/sair SairR POST
+/sair SairR GET
 
 /admin    AdminR   GET

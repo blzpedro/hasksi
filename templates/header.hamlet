@@ -6,14 +6,12 @@
             <ul class="navbar-nav mr-4">
                 $maybe _ <- sess
                     <li class="nav-item">
-                        <a href=@{SobreR} class="nav-link " data-value="sobre">Sobre
+                            <a href=@{SobreR} class="nav-link " data-value="sobre">Sobre
                             
                     <li class="nav-item">
-                        <a href="javascript:logout.submit();">Sair
-                            
+                        <a href="@{SairR}" class="nav-link " data-value="sair">Sair
                 $nothing      
                     <li class="nav-item">
-                        <form action=@{SairR} method=post name=sair>
                         <a href=@{EntrarR} class="nav-link" data-value="login">Login
                     
                     <li class="nav-item">
