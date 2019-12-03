@@ -20,10 +20,9 @@ import Database.Esqueleto as E
 
 getHomeR :: Handler Html
 getHomeR = do
-    frase <- runDB  $ 
-        select FrasesFrase [] $ 1
-        
-    -- frases <- runDB $ rawSql "select 'frase' from 'frases' ORDER BY random() limit 1" []
+    
+    frases <- runDB $ rawSql "select 'frase' from 'frases' ORDER BY random() limit 1" []
+    
     defaultLayout $ do
         sess <- lookupSession "_NOME"
         addStylesheet (StaticR css_bootstrap_css)
