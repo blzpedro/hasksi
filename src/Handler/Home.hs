@@ -22,7 +22,7 @@ getHomeR :: Handler Html
 getHomeR = do
     frase <- select $
         from $ \frases -> do
-        orderBy  [random() limit 1]
+        orderBy  [random_ limit 1]
         
     -- frases <- runDB $ rawSql "select 'frase' from 'frases' ORDER BY random() limit 1" []
     defaultLayout $ do
@@ -34,14 +34,7 @@ getHomeR = do
         setTitle "HaskellMilGrau"
         $(whamletFile "templates/header.hamlet")
         $(whamletFile "templates/home.hamlet")
-        $(widgetFile "home")
         toWidget $(juliusFile "templates/home.julius")
-        [whamlet|
-            <ul>
-                $forall(Entity fraseid frase) <- frases
-                    <li>#{fraseFrase frase}
-        
-        |]
     -- addScript (Static script_js) -> js interno
     -- 8aQZvtkO
     -- defaultLayout $ do 
