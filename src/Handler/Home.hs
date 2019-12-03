@@ -22,7 +22,8 @@ getHomeR :: Handler Html
 getHomeR = do
     frase <- select $
         from $ \frases -> do
-        orderBy  [random_ limit 1]
+        orderBy  [random_ frase]
+        limit 1
         
     -- frases <- runDB $ rawSql "select 'frase' from 'frases' ORDER BY random() limit 1" []
     defaultLayout $ do
