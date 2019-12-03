@@ -43,7 +43,7 @@ postEntrarR = do
                 Nothing -> do 
                     setMessage [shamlet|
                         <div>
-                            E-mail N ENCONTRADO!
+                            E-mail não encontrado!
                     |]
                     redirect EntrarR
                 Just (Entity _ usu) -> do 
@@ -53,7 +53,7 @@ postEntrarR = do
                     else do 
                         setMessage [shamlet|
                             <div>
-                                Senha INCORRETA!
+                                Senha incorreta!
                         |]
                         redirect EntrarR 
         _ -> redirect HomeR
@@ -73,5 +73,5 @@ getAdminR = do
         addStylesheet (StaticR css_main_css)
         [whamlet|
             <h1>
-                BEM-VINDO ADMIN!
+                Bem-vindo admin!
         |]

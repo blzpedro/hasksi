@@ -12,13 +12,17 @@ import Text.Lucius
 import Text.Julius
 --import Network.HTTP.Types.Status
 import Database.Persist.Postgresql
+import Database.Persist.Sql (rawSql)
 
+
+-- randomPhrase -> select "frase" from "frases" ORDER BY random() limit 1;
 
 getHomeR :: Handler Html
 getHomeR = do
     defaultLayout $ do
+        frases <- runDB $ rawSql "select "frase" from "frases" ORDER BY random() limit 1" []
         sess <- lookupSession "_NOME"
-        $maybe _ <- sess $ do
+        $maybe _ <- sess
             $(whamletFile "templates/login.hamlet")
         $nothing
             addStylesheet (StaticR css_bootstrap_css)
@@ -29,6 +33,7 @@ getHomeR = do
             $(whamletFile "templates/header.hamlet")
             $(whamletFile "templates/home.hamlet")
             toWidget $(juliusFile "templates/home.julius")
+            $(widgetFile "rawsql")
     -- addScript (Static script_js) -> js interno
     -- 8aQZvtkO
     -- defaultLayout $ do 
