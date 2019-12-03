@@ -23,8 +23,8 @@ getHomeR = do
     frase <- runDB $
         select $
         from $ \frases -> do
-        orderBy  [random_ FrasesFrase]
         limit 1
+        return FrasesFrase
         
     -- frases <- runDB $ rawSql "select 'frase' from 'frases' ORDER BY random() limit 1" []
     defaultLayout $ do
