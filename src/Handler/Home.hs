@@ -13,6 +13,7 @@ import Text.Julius
 --import Network.HTTP.Types.Status
 import Database.Persist.Postgresql
 import Database.Persist.Sql (rawSql)
+import Database.Esqueleto
 
 
 -- randomPhrase -> select "frase" from "frases" ORDER BY random() limit 1;
