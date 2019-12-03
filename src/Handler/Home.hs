@@ -13,7 +13,7 @@ import Text.Julius
 --import Network.HTTP.Types.Status
 import Database.Persist.Postgresql
 import Database.Persist.Sql (rawSql)
-import Database.Esqueleto
+import Database.Esqueleto as E
 
 
 -- randomPhrase -> select "frase" from "frases" ORDER BY random() limit 1;
@@ -21,9 +21,9 @@ import Database.Esqueleto
 getHomeR :: Handler Html
 getHomeR = do
     frase <- runDB $
-        select $
-        from $ \frases -> do
-        limit 1
+        E.select $
+        E.from $ \frases -> do
+        E.limit 1
         return FrasesFrase
         
     -- frases <- runDB $ rawSql "select 'frase' from 'frases' ORDER BY random() limit 1" []
