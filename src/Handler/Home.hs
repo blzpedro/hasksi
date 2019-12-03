@@ -17,6 +17,7 @@ import Database.Persist.Postgresql
 getHomeR :: Handler Html
 getHomeR = do
     defaultLayout $ do
+        sess <- lookupSession "_NOME"
         addStylesheet (StaticR css_bootstrap_css)
         addStylesheet (StaticR css_main_css)
         addScript $ StaticR js_jquery_min_js
@@ -25,7 +26,6 @@ getHomeR = do
         $(whamletFile "templates/header.hamlet")
         $(whamletFile "templates/home.hamlet")
         toWidget $(juliusFile "templates/home.julius")
-        sess <- lookupSession "_NOME"
     -- addScript (Static script_js) -> js interno
     -- 8aQZvtkO
     -- defaultLayout $ do 
