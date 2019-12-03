@@ -26,6 +26,7 @@ getAlunoR = do
     (widget, enctype) <- generateFormPost formAluno 
     msg <- getMessage
     defaultLayout $ do 
+        sess <- lookupSession "_NOME"
         $(whamletFile "templates/header.hamlet")
         addStylesheet (StaticR css_bootstrap_css)
         [whamlet|
