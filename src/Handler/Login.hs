@@ -22,7 +22,8 @@ getEntrarR = do
     (widget,_) <- generateFormPost formLogin
     msg <- getMessage
     defaultLayout $ 
-    -- $(whamletFile "templates/header.hamlet")
+    sess <- lookupSession "_NOME"
+    $(whamletFile "templates/header.hamlet")
         [whamlet|
             $maybe mensa <- msg 
                 <div>

@@ -16,6 +16,7 @@ import Database.Persist.Postgresql
 getSobreR :: Handler Html
 getSobreR = do
     defaultLayout $ do
+        sess <- lookupSession "_NOME"
         addStylesheet (StaticR css_bootstrap_css)
         addStylesheet (StaticR css_main_css)
         addScript $ StaticR js_jquery_min_js
