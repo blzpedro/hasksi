@@ -9,7 +9,8 @@
                             <a href=@{SobreR} class="nav-link " data-value="sobre">Sobre
                             
                     <li class="nav-item">
-                        <form action=@{SairR} method=post name=logout><a href=@{LoginR}>Sair
+                        <form action=@{SairR} method=post name=logout>
+                        <a href=@{LoginR}>Sair
                 $nothing      
                     <li class="nav-item">
                         <a href=@{EntrarR} class="nav-link" data-value="login">Login
