@@ -22,22 +22,12 @@ getEntrarR = do
     (widget,_) <- generateFormPost formLogin
     msg <- getMessage
     defaultLayout $ do
+        setTitle "HaskellMilGrau"
         sess <- lookupSession "_NOME"
         $(whamletFile "templates/header.hamlet")
         addStylesheet (StaticR css_bootstrap_css)
         addStylesheet (StaticR css_main_css)
-        [whamlet|
-            $maybe mensa <- msg 
-                <div>
-                    ^{mensa}
-            
-            <h1>
-                ENTRAR
-            
-            <form method=post action=@{EntrarR}>
-                ^{widget}
-                <input type="submit" value="Entrar">
-        |]
+        $(whamletFile "templates/login.hamlet")
 
 postEntrarR :: Handler Html
 postEntrarR = do 
@@ -77,10 +67,11 @@ getAdminR :: Handler Html
 getAdminR = do 
     defaultLayout $ do
         sess <- lookupSession "_NOME"
+        setTitle "HaskellMilGrau"
         $(whamletFile "templates/header.hamlet")
         addStylesheet (StaticR css_bootstrap_css)
         addStylesheet (StaticR css_main_css)
         [whamlet|
             <h1>
-                BEM-VINDO MEU REI!
+                BEM-VINDO ADMIN!
         |]

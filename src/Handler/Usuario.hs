@@ -26,21 +26,11 @@ getUsuarioR = do
     msg <- getMessage
     defaultLayout $ do
         sess <- lookupSession "_NOME"
+        setTitle "HaskellMilGrau"
         $(whamletFile "templates/header.hamlet")
         addStylesheet (StaticR css_bootstrap_css)
         addStylesheet (StaticR css_main_css)
-        [whamlet|
-            $maybe mensa <- msg 
-                <div>
-                    ^{mensa}
-            
-            <h1>
-                CADASTRO DE USUARIO
-            
-            <form method=post action=@{UsuarioR}>
-                ^{widget}
-                <input type="submit" value="Cadastrar">
-        |]
+        $(whamletFile "templates/usuario.hamlet")
         
 postUsuarioR :: Handler Html
 postUsuarioR = do 
