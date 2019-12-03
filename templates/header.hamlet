@@ -8,8 +8,8 @@
                     <li class="nav-item">
                             <a href=@{SobreR} class="nav-link " data-value="sobre">Sobre
                             
-                    <li>
-                        <a href="@{SairR}" class="nav-link " data-value="sair">Sair
+                    <li class="nav-item">
+                        <a href="@{SairR}" class="nav-link ">Sair
                 $nothing      
                     <li class="nav-item">
                         <a href=@{EntrarR} class="nav-link" data-value="login">Login
