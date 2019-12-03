@@ -21,7 +21,7 @@ getEntrarR :: Handler Html
 getEntrarR = do 
     (widget,_) <- generateFormPost formLogin
     msg <- getMessage
-    defaultLayout $ 
+    defaultLayout $ do
         sess <- lookupSession "_NOME"
         $(whamletFile "templates/header.hamlet")
         [whamlet|
