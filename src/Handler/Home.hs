@@ -33,7 +33,8 @@ getHomeR = do
         toWidget $(juliusFile "templates/home.julius")
         [whamlet|
             <ul>
-                $forall(Entity frasesid frase) <- frases
+                $forall(Entity fraseid frase) <- frases
+                    <li>#{fraseFrase frase}
         
         |]
     -- addScript (Static script_js) -> js interno
