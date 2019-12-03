@@ -18,14 +18,17 @@ getHomeR :: Handler Html
 getHomeR = do
     defaultLayout $ do
         sess <- lookupSession "_NOME"
-        addStylesheet (StaticR css_bootstrap_css)
-        addStylesheet (StaticR css_main_css)
-        addScript $ StaticR js_jquery_min_js
-        addScript $ StaticR js_bootstrap_js
-        setTitle "HaskellMilGrau"
-        $(whamletFile "templates/header.hamlet")
-        $(whamletFile "templates/home.hamlet")
-        toWidget $(juliusFile "templates/home.julius")
+        $maybe _ <- sess
+            $(whamletFile "templates/login.hamlet")
+        $nothing
+            addStylesheet (StaticR css_bootstrap_css)
+            addStylesheet (StaticR css_main_css)
+            addScript $ StaticR js_jquery_min_js
+            addScript $ StaticR js_bootstrap_js
+            setTitle "HaskellMilGrau"
+            $(whamletFile "templates/header.hamlet")
+            $(whamletFile "templates/home.hamlet")
+            toWidget $(juliusFile "templates/home.julius")
     -- addScript (Static script_js) -> js interno
     -- 8aQZvtkO
     -- defaultLayout $ do 
