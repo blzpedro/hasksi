@@ -7,7 +7,7 @@
                 $maybe _ <- sess
                 <li class="nav-item">
                         <a href=@{SobreR} class="nav-link " data-value="sobre">Sobre
-                        
+                $nothing      
                 <li class="nav-item">
                     <a href=@{EntrarR} class="nav-link" data-value="login">Login
                 
