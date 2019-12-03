@@ -24,6 +24,7 @@ getEntrarR = do
     defaultLayout $ do
         sess <- lookupSession "_NOME"
         $(whamletFile "templates/header.hamlet")
+        addStylesheet (StaticR css_bootstrap_css)
         addStylesheet (StaticR css_main_css)
         [whamlet|
             $maybe mensa <- msg 
@@ -74,7 +75,12 @@ postSairR = do
 
 getAdminR :: Handler Html
 getAdminR = do 
-    defaultLayout [whamlet|
-        <h1>
-            BEM-VINDO MEU REI!
-    |]
+    defaultLayout $ do
+        sess <- lookupSession "_NOME"
+        $(whamletFile "templates/header.hamlet")
+        addStylesheet (StaticR css_bootstrap_css)
+        addStylesheet (StaticR css_main_css)
+        [whamlet|
+            <h1>
+                BEM-VINDO MEU REI!
+        |]
