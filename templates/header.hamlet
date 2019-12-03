@@ -4,12 +4,13 @@
             <span class="navbar-toggler-icon">
         <div class="collapse navbar-collapse " id="navbarSupportedContent">
             <ul class="navbar-nav mr-4">
+                $maybe _ <- sess
+                <li class="nav-item">
+                        <a href=@{SobreR} class="nav-link " data-value="sobre">Sobre
+                $nothing    
                 <li class="nav-item">
                     <a href=@{EntrarR} class="nav-link" data-value="login">Login
                 
                 <li class="nav-item">
                         <a href=@{UsuarioR} class="nav-link " data-value="cadastro">Cadastro
-                        
-                <li class="nav-item">
-                        <a href=@{SobreR} class="nav-link " data-value="sobre">Sobre
                 

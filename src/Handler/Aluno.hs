@@ -26,6 +26,7 @@ getAlunoR = do
     (widget, enctype) <- generateFormPost formAluno 
     msg <- getMessage
     defaultLayout $ do 
+        $(whamletFile "templates/header.hamlet")
         addStylesheet (StaticR css_bootstrap_css)
         [whamlet|
             $maybe mensa <- msg
@@ -49,7 +50,7 @@ postAlunoR = do
             runDB $ insert aluno 
             setMessage [shamlet|
                 <h2>
-                    REGISTRO INCLUIDO
+                    Novo aluno incluído
             |]
             redirect AlunoR
         _ -> redirect HomeR
@@ -59,6 +60,7 @@ getListAlunoR = do
     -- select * from aluno order by aluno.nome
     alunos <- runDB $ selectList [] [Asc AlunoNome]
     defaultLayout $ do 
+        $(whamletFile "templates/header.hamlet")
         addStylesheet (StaticR css_bootstrap_css)
         $(whamletFile "templates/alunos.hamlet")
 
