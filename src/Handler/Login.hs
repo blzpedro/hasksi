@@ -71,7 +71,7 @@ postEntrarR = do
         _ -> redirect HomeR
         
 postLoginRaizR :: Handler Html
-postEntrarR = do 
+postLoginRaizR = do 
     ((result,_),_) <- runFormPost formLogin
     case result of 
         FormSuccess ("root@root.com","root125") -> do 
