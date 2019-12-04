@@ -1,19 +1,14 @@
-<nav class="navbar navbar-expand-lg">
-        <a href=@{HomeR} class="navbar-brand">Haskellmilgrau
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon">
-        <div class="collapse navbar-collapse " id="navbarSupportedContent">
-            <ul class="navbar-nav mr-4">
-                $maybe _ <- sess
-                    <li class="nav-item">
-                            <a href=@{SobreR} class="nav-link " data-value="sobre">Sobre
-                            
-                    <li class="nav-item">
-                        <a href="@{SairR}" class="nav-link " data-value="sair">Sair
-                $nothing      
-                    <li class="nav-item">
-                        <a href=@{EntrarR} class="nav-link" data-value="login">Login
-                    
-                    <li class="nav-item">
-                        <a href=@{UsuarioR} class="nav-link " data-value="cadastro">Cadastro
-                        
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">Start Bootstrap
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars">
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#download">Download
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#features">Features
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#contact">Contact
