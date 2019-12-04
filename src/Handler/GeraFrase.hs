@@ -37,7 +37,7 @@ getGeraFraseR = do
         <header class="masthead">
             <div class="container h-100">
               <div class="row h-100">
-                <div class="col-lg-7 my-auto">
+                <div class="col-lg-12 my-auto">
                     <h1 .title>HaskellMilGrau - Frases aleatórias
                     <div .logo-image></div>
                     <button #btn-random .btn-danger>Clique aqui e<br> gere sua frase!
