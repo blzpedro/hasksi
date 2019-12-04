@@ -35,9 +35,8 @@ getHomeR = do
               <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
               <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
         |] 
-        let fraseKey = [1..15]
-        let randomKey = (randomRIO fraseKey)
-        frase <- get $ Key $ PersistInt64 (fromIntegral i)
+        let randomKey = randomRIO (1,15 :: Int)
+        frase <- get $ Key $ PersistInt64 (fromIntegral randomKey)
         toWidget
             [whamlet|
                 <p>#{frase}
