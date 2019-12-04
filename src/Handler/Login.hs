@@ -102,7 +102,7 @@ postLoginRaizR = do
 getSairR :: Handler Html 
 getSairR = do 
     deleteSession "_NOME"
-    redirect HomeR
+    redirect LoginRaizR
 
 getAdminR :: Handler Html
 getAdminR = do 
