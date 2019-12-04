@@ -15,6 +15,7 @@ import Database.Persist.Postgresql
 import Database.Persist.Sql (rawSql)
 import System.Random (randomR)
 import Database.Persist.Types (PersistValue(PersistInt64))
+
 -- randomPhrase -> select "frase" from "frases" ORDER BY random() limit 1;
 
 getHomeR :: Handler ()
@@ -35,12 +36,11 @@ getHomeR = do
               <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
               <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
         |] 
-        let randomKey = randomR (1,15 :: Int)
-        frase <- get $ Key $ PersistInt64 (fromIntegral randomKey)
-        setMessage
-            [shamlet|
-                <p>#{frase}
-            |]
+        -- let randomKey = randomR (1,16 :: Int)
+        -- frase <- get $ Key $ PersistInt64 (fromIntegral randomKey)
+        -- [whamlet|
+        --     <p>#{frase}
+        -- |]
         
 
     -- addScript (Static script_js) -> js interno

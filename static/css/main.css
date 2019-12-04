@@ -110,10 +110,20 @@ input{
     line-height: 1.5;
     color: #495057;
     background-color: #fff;
+    border: none;
+    margin-bottom: 20px;
+    margin-top: -20px;
     background-clip: padding-box;
-    border: 1px solid #ced4da;
-    border-radius: 0.25rem;
+    border-bottom: 1px solid #ced4da;
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.box-login{
+    background-color: white;
+    margin-top: 25vh !important;
+    color: black;
+    border-radius: 25px;
+    padding: 30px;
 }
 
 /*!
