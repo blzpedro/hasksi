@@ -36,7 +36,7 @@ getHomeR = do
               <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
         |] 
         let fraseKey = [1..15]
-        let randomKey = (randomR fraseKey)
+        let randomKey = (randomRIO fraseKey)
         frase <- get $ Key $ PersistInt64 (fromIntegral i)
         toWidget
             [whamlet|
