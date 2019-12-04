@@ -34,9 +34,13 @@ getGeraFraseR = do
               <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
         |] 
         [whamlet|
-            <h1 .title>HaskellMilGrau - Frases aleatórias
-            <div .logo-image></div>
-            <button #btn-random .btn-danger>Clique aqui e<br> gere sua frase!
+        <header class="masthead">
+            <div class="container h-100">
+              <div class="row h-100">
+                <div class="col-lg-7 my-auto">
+                    <h1 .title>HaskellMilGrau - Frases aleatórias
+                    <div .logo-image></div>
+                    <button #btn-random .btn-danger>Clique aqui e<br> gere sua frase!
         |]
         -- let randomKey = randomR (1,16 :: Int)
         -- frase <- get $ Key $ PersistInt64 (fromIntegral randomKey)

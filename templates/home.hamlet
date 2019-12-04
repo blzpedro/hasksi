@@ -4,7 +4,10 @@
         <div class="col-lg-7 my-auto">
           <div class="header-content mx-auto">
             <h1 class="mb-5">Só as melhores frases do Haskell (ou algumas sem sentido?), explicativas e de fácil entendimento, lendo as nossas frases cê vai gabaritar na sua P3 de Haskell (100% comprovado!).
-            <a href=@{EntrarR} class="btn btn-outline btn-xl js-scroll-trigger">Vai ler umas frases rapá!
+            $maybe _ <- sess
+              <a href=@{GeraFraseR} class="btn btn-outline btn-xl js-scroll-trigger">Vai ler umas frases rapá!
+            $nothing
+              <a href=@{EntrarR} class="btn btn-outline btn-xl js-scroll-trigger">Vai ler umas frases rapá!
         <div class="col-lg-5 my-auto">
           <div class="device-container">
             <div class="device-mockup iphone6_plus portrait white">
