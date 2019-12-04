@@ -26,7 +26,7 @@ getHomeR = do
         addScript $ StaticR js_jquery_min_js
         addScript $ StaticR js_bootstrap_js
         setTitle "HaskellMilGrau"
-        $(whamletFile "templates/header2.hamlet")
+        $(whamletFile "templates/header.hamlet")
         $(whamletFile "templates/home.hamlet")
         toWidget $(juliusFile "templates/home.julius")
     -- addScript (Static script_js) -> js interno
