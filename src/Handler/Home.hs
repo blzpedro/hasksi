@@ -12,13 +12,11 @@ import Text.Lucius
 import Text.Julius
 --import Network.HTTP.Types.Status
 import Database.Persist.Postgresql
-import Database.Persist.Sql (rawSql)
-import System.Random (randomR)
 import Database.Persist.Types (PersistValue(PersistInt64))
 
 -- randomPhrase -> select "frase" from "frases" ORDER BY random() limit 1;
 
-getHomeR :: Handler html
+getHomeR :: Handler Html
 getHomeR = do
     defaultLayout $ do
         sess <- lookupSession "_NOME"
