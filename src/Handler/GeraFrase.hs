@@ -41,6 +41,8 @@ getGeraFraseR = do
                     <h1 .title>HaskellMilGrau - só frase top!
                     <div .logo-image></div>
                         <button #btn-random .btn-danger>Clique aqui e<br> gere sua frase!
+                <div .string-field>
+                    <span>
         |]
         -- let randomKey = randomR (1,16 :: Int)
         -- frase <- get $ Key $ PersistInt64 (fromIntegral randomKey)
