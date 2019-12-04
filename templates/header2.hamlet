@@ -1,15 +1,12 @@
 <header id="header" class="alt">
 	<a href="index.html" class="logo"><strong>Haskellmilgrau <span>by OS Mano
-	<nav>
-		<a href="#menu">Menu
+	<nav><a href="#menu">Menu
 
 
 <nav id="menu">
 	<ul class="links">
-		<li><a href="index.html">Home
-		<li><a href="frases.html">Frases
-		<li><a href="contact.html">Contato
-		<li><a href="sobre.html">Sobre
+	    <li><a href=@{HomeR}>Home
+		<li><a href=@{SobreR}>Sobre
 	<ul class="actions stacked">
-		<li><a href="#" class="button primary fit">Comece Agora
-		<li><a href="#" class="button fit">Faça o login
+		<li><a href=@{UsuarioR} class="button primary fit">Comece Agora
+		<li><a href=@{EntrarR} class="button fit">Faça o login
