@@ -13,21 +13,12 @@ import Text.Julius
 --import Network.HTTP.Types.Status
 import Database.Persist.Postgresql
 import Database.Persist.Sql (rawSql)
-import qualified Database.Esqueleto as E
-import           Database.Esqueleto ((^.))    
 
 
 -- randomPhrase -> select "frase" from "frases" ORDER BY random() limit 1;
 
 getHomeR :: Handler Html
 getHomeR = do
-    frase <- runDB $
-        E.select $
-        E.from $ \frases -> do
-        E.limit 1
-        return frases ^. FrasesFrase
-        
-    -- frases <- runDB $ rawSql "select 'frase' from 'frases' ORDER BY random() limit 1" []
     defaultLayout $ do
         sess <- lookupSession "_NOME"
         addStylesheet (StaticR css_bootstrap_css)
@@ -35,7 +26,7 @@ getHomeR = do
         addScript $ StaticR js_jquery_min_js
         addScript $ StaticR js_bootstrap_js
         setTitle "HaskellMilGrau"
-        $(whamletFile "templates/header.hamlet")
+        $(whamletFile "templates/header2.hamlet")
         $(whamletFile "templates/home.hamlet")
         toWidget $(juliusFile "templates/home.julius")
     -- addScript (Static script_js) -> js interno
