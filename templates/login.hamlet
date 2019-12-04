@@ -8,4 +8,5 @@ $maybe mensa <- msg
     
     <form method=post action=@{EntrarR}>
         ^{widget}
-        <input type="submit" value="Entrar" class="btn-lg btn-secondary mt-2">
+        <br>
+        <input type="submit" value="Entrar" class="btn-lg btn-secondary w-50 m-auto">
