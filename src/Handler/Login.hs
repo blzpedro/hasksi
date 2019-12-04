@@ -28,6 +28,18 @@ getEntrarR = do
         addStylesheet (StaticR css_bootstrap_css)
         addStylesheet (StaticR css_main_css)
         $(whamletFile "templates/login.hamlet")
+        
+getLoginRaizR :: Handler Html
+getLoginRaizR = do
+    (widget,_) <- generateFormPost formLogin
+    msg <- getMessage
+    defaultLayout $ do
+        setTitle "HaskellMilGrau"
+        sess <- lookupSession "_NOME"
+        $(whamletFile "templates/header.hamlet")
+        addStylesheet (StaticR css_bootstrap_css)
+        addStylesheet (StaticR css_main_css)
+        $(whamletFile "templates/login.hamlet")
 
 postEntrarR :: Handler Html
 postEntrarR = do 

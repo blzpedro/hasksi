@@ -5,7 +5,7 @@
 
 /home HomeR GET 
 
-/ EntrarR GET POST
+/ LoginRaizR GET POST
 
 /sobre SobreR GET
 
