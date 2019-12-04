@@ -35,9 +35,9 @@ getHomeR = do
               <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
               <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
         |] 
-        frases <- runDB $ selectList [] [Asc FrasesFrase]
-        let fraseKey = fmap (\(Entity key _) -> key) frases
-        frase <- runDB $ get404 (randomR fraseKey)
+        let fraseKey = [1..15]
+        let randomKey = ((randomR fraseKey) :: FrasesId)
+        frase <- runDB $ get404 randomKey
         [whamlet|
             <p>#{frase}
         |]
