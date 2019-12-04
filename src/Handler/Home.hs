@@ -38,9 +38,10 @@ getHomeR = do
         let fraseKey = [1..15]
         let randomKey = ((randomR fraseKey) :: FrasesId)
         frase <- runDB $ get404 randomKey
-        [whamlet|
-            <p>#{frase}
-        |]
+        toWidget
+            [whamlet|
+                <p>#{frase}
+            |]
         
 
     -- addScript (Static script_js) -> js interno
