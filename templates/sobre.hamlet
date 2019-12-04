@@ -1,10 +1,9 @@
-<div class="sobre">
-        <h1 class="text-center">Sobre
-        <div class="container">
-            <div class="row">
-            <div class="col-lg-8 mx-auto">
-                <h2>Quem somos nós:
-                <p class="lead">Haskellmilgrau</p>
-                <ul>
-                    <li>Gabriel
-                    <li>Pedro
+<header class="masthead">
+    <div class="container h-100">
+      <div class="row h-100">
+        <div class="col-lg-12 my-auto">
+            <h2>Quem somos nós:
+            <p class="lead">Haskellmilgrau</p>
+            <ul>
+                <li>Gabriel
+                <li>Pedro

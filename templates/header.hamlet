@@ -7,7 +7,7 @@
         <ul class="navbar-nav ml-auto">
             $maybe _ <- sess
                 <li class="nav-item">
-                        <a href=@GeraFraseR} class="nav-link " data-value="sobre">Gerar frase
+                        <a href=@{GeraFraseR} class="nav-link " data-value="sobre">Gerar frase
                         
                 <li class="nav-item">
                         <a href=@{SobreR} class="nav-link " data-value="sobre">Sobre
