@@ -10,7 +10,7 @@
                         <a href=@{SobreR} class="nav-link " data-value="sobre">Sobre
                         
                 <li class="nav-item">
-                <a href="@{SairR}" class="nav-link " data-value="sair">Sair
+                    <a href="@{SairR}" class="nav-link " data-value="sair">Sair
             $nothing      
                 <li class="nav-item">
                     <a href=@{EntrarR} class="nav-link" data-value="login">Login

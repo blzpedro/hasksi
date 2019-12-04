@@ -90,7 +90,7 @@ postLoginRaizR = do
                 Just (Entity _ usu) -> do 
                     if (usuarioSenha usu == senha) then do
                         setSession "_NOME" (usuarioNome usu)
-                        redirect HomeR
+                        redirect GeraFraseR
                     else do 
                         setMessage [shamlet|
                             <div>

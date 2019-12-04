@@ -43,6 +43,7 @@ import Handler.Sobre
 import Handler.Aluno  
 import Handler.Usuario
 import Handler.Login
+import Handler.GeraFrase
 
 -- Aqui 
 

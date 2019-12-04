@@ -3,9 +3,11 @@
 /favicon.ico FaviconR GET
 /robots.txt RobotsR GET
 
-/home HomeR GET 
+/ HomeR GET 
 
 / LoginRaizR GET POST
+
+/frase GeraFraseR GET
 
 /sobre SobreR GET
 
