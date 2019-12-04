@@ -23,6 +23,7 @@ getHomeR = do
         sess <- lookupSession "_NOME"
         addStylesheet (StaticR css_bootstrap_css)
         addStylesheet (StaticR css_main_css)
+        addStylesheet (StaticR css_fontawesomeall_min_css)
         addScript $ StaticR js_jquery_min_js
         addScript $ StaticR js_bootstrap_js
         setTitle "HaskellMilGrau"
