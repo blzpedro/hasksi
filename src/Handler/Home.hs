@@ -17,7 +17,7 @@ import System.Random (randomR)
 import Database.Persist.Types (PersistValue(PersistInt64))
 -- randomPhrase -> select "frase" from "frases" ORDER BY random() limit 1;
 
-getHomeR :: Handler Html
+getHomeR :: Handler ()
 getHomeR = do
     defaultLayout $ do
         sess <- lookupSession "_NOME"
@@ -37,8 +37,8 @@ getHomeR = do
         |] 
         let randomKey = randomR (1,15 :: Int)
         frase <- get $ Key $ PersistInt64 (fromIntegral randomKey)
-        ToWidgetBody
-            [whamlet|
+        setMessage
+            [shamlet|
                 <p>#{frase}
             |]
         
