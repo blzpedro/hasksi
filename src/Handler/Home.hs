@@ -37,7 +37,7 @@ getHomeR = do
         |] 
         let randomKey = randomR (1,15 :: Int)
         frase <- get $ Key $ PersistInt64 (fromIntegral randomKey)
-        toWidget
+        ToWidgetBody
             [whamlet|
                 <p>#{frase}
             |]
