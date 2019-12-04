@@ -28,18 +28,6 @@ getEntrarR = do
         addStylesheet (StaticR css_bootstrap_css)
         addStylesheet (StaticR css_main_css)
         $(whamletFile "templates/login.hamlet")
-        
-getLoginRaizR :: Handler Html
-getLoginRaizR = do
-    (widget,_) <- generateFormPost formLogin
-    msg <- getMessage
-    defaultLayout $ do
-        setTitle "HaskellMilGrau"
-        sess <- lookupSession "_NOME"
-        $(whamletFile "templates/header.hamlet")
-        addStylesheet (StaticR css_bootstrap_css)
-        addStylesheet (StaticR css_main_css)
-        $(whamletFile "templates/login.hamlet")
 
 postEntrarR :: Handler Html
 postEntrarR = do 
@@ -62,35 +50,6 @@ postEntrarR = do
                     if (usuarioSenha usu == senha) then do
                         setSession "_NOME" (usuarioNome usu)
                         redirect HomeR
-                    else do 
-                        setMessage [shamlet|
-                            <div>
-                                Senha incorreta!
-                        |]
-                        redirect EntrarR 
-        _ -> redirect HomeR
-        
-postLoginRaizR :: Handler Html
-postLoginRaizR = do 
-    ((result,_),_) <- runFormPost formLogin
-    case result of 
-        FormSuccess ("root@root.com","root125") -> do 
-            setSession "_NOME" "admin"
-            redirect AdminR
-        FormSuccess (email,senha) -> do 
-           -- select * from usuario where email=digitado.email
-           usuario <- runDB $ getBy (UniqueEmailIx email)
-           case usuario of 
-                Nothing -> do 
-                    setMessage [shamlet|
-                        <div>
-                            E-mail não encontrado!
-                    |]
-                    redirect EntrarR
-                Just (Entity _ usu) -> do 
-                    if (usuarioSenha usu == senha) then do
-                        setSession "_NOME" (usuarioNome usu)
-                        redirect GeraFraseR
                     else do 
                         setMessage [shamlet|
                             <div>
