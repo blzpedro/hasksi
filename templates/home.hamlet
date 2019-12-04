@@ -3,7 +3,11 @@
       <div class="row h-100">
         <div class="col-lg-7 my-auto">
           <div class="mx-auto">
-            <h1 class="mb-5">Só as melhores frases do Haskell (ou algumas sem sentido?), explicativas e de fácil entendimento, lendo as nossas frases cê vai gabaritar na sua P3 de Haskell (100% comprovado!).
+            $maybe nome <- sess
+              <p>Bem-vindo - <strong>#{nome}
+              <h1 class="mb-5">Só as melhores frases do Haskell (ou algumas sem sentido?), explicativas e de fácil entendimento, lendo as nossas frases cê vai gabaritar na sua P3 de Haskell (100% comprovado!).
+            $nothing
+              <h1 class="mb-5">Só as melhores frases do Haskell (ou algumas sem sentido?), explicativas e de fácil entendimento, lendo as nossas frases cê vai gabaritar na sua P3 de Haskell (100% comprovado!).
             $maybe _ <- sess
               <a href=@{GeraFraseR} class="btn btn-outline btn-xl js-scroll-trigger">Vai ler umas frases rapá!
             $nothing
