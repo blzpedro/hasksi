@@ -14,7 +14,7 @@ import Text.Julius
 import Database.Persist.Postgresql
 import Database.Persist.Sql (rawSql)
 import System.Random (randomR)
-
+import Database.Persist.Types (PersistValue(PersistInt64))
 -- randomPhrase -> select "frase" from "frases" ORDER BY random() limit 1;
 
 getHomeR :: Handler Html
@@ -36,8 +36,8 @@ getHomeR = do
               <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
         |] 
         let fraseKey = [1..15]
-        let randomKey = ((randomR fraseKey) :: FrasesId)
-        frase <- runDB $ get404 randomKey
+        let randomKey = (randomR fraseKey)
+        frase <- get $ Key $ PersistInt64 (fromIntegral i)
         toWidget
             [whamlet|
                 <p>#{frase}
