@@ -12,5 +12,5 @@ $maybe mensa <- msg
             <form method=post action=@{EntrarR}>
                 ^{widget}
                 <br>
-                <input type="submit" value="Entrar" style="padding:15px -1px" class="btn btn-outline btn-xl js-scroll-trigger">
+                <input type="submit" value="Entrar" class="btn btn-outline js-scroll-trigger">
           
