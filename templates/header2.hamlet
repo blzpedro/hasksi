@@ -4,16 +4,3 @@
 	    <span>by OS Mano
 	<nav>
 	<a href="#menu">Menu
-<nav id="menu">
-    $maybe _ <- sess
-    	<ul class="links">
-    	    <li>
-    	        <a href=@{HomeR}>Home
-    		<li>
-    		    <a href=@{SobreR}>Sobre
-    $nothing
-    	<ul class="actions stacked">
-    		<li>
-    		    <a href=@{UsuarioR} class="button primary fit">Comece Agora
-    		<li>
-    		    <a href=@{EntrarR} class="button fit">Faça o login
