@@ -15,7 +15,6 @@ import Database.Persist.Postgresql
 import Database.Persist.Sql (rawSql)
 import System.Random (randomR)
 
-
 -- randomPhrase -> select "frase" from "frases" ORDER BY random() limit 1;
 
 getHomeR :: Handler Html
@@ -40,7 +39,7 @@ getHomeR = do
         let fraseKey = fmap (\(Entity key, _) -> randomR key) frases
         frase <- runDB $ get404 fraseKey
         [whamlet|
-            <p>#{frase}
+            <p>Sua frase é: #{frase}
         |]
 
     -- addScript (Static script_js) -> js interno
