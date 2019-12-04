@@ -5,12 +5,12 @@ $maybe mensa <- msg
 <header class="masthead">
     <div class="container h-100">
       <div class="row h-100">
-        <div class="col-lg-12 my-auto">
+        <div class="col-lg-6 my-auto text-center">
             <h1>
                 Login
         
             <form method=post action=@{EntrarR}>
                 ^{widget}
                 <br>
-                <input type="submit" value="Entrar" class="btn btn-outline btn-xl js-scroll-trigger">
+                <input type="submit" value="Entrar" style="padding:padding:15px -1px" class="btn btn-outline btn-xl js-scroll-trigger">
           
