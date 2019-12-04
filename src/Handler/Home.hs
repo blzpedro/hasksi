@@ -18,7 +18,7 @@ import Database.Persist.Types (PersistValue(PersistInt64))
 
 -- randomPhrase -> select "frase" from "frases" ORDER BY random() limit 1;
 
-getHomeR :: Handler ()
+getHomeR :: Handler html
 getHomeR = do
     defaultLayout $ do
         sess <- lookupSession "_NOME"
