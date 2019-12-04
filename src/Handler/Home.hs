@@ -29,7 +29,9 @@ getHomeR = do
         $(whamletFile "templates/header.hamlet")
         $(whamletFile "templates/home.hamlet")
         toWidget $(juliusFile "templates/home.julius")
-        toWidgetHead [hamlet|<meta name="viewport" content="width=device-width, initial-scale=1.0">]
+        toWidgetHead [hamlet|
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        |]
     -- addScript (Static script_js) -> js interno
     -- 8aQZvtkO
     -- defaultLayout $ do 
