@@ -2,9 +2,11 @@ $maybe mensa <- msg
     <div>
         ^{mensa}
     
-<h1>
-    Cadastro
-
-<form method=post action=@{UsuarioR}>
-    ^{widget}
-    <input type="submit" value="Cadastrar">
+<div class="col-md-4 m-auto text-center">
+    <h1>
+        Cadastro
+    
+    <form method=post action=@{UsuarioR}>
+        ^{widget}
+        <br>
+        <input type="submit" value="Cadastrar" class="btn-lg btn-secondary w-50 m-auto">
