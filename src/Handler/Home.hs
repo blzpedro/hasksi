@@ -35,12 +35,15 @@ getHomeR = do
               <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
               <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
         |]
-        frases <- runDB $ selectList [] [Asc FrasesFrase]
-        let fraseKey = fmap (\(Entity key, _) -> randomR key) frases
-        frase <- runDB $ get404 fraseKey
-        [whamlet|
-            <p>Sua frase é: #{frase}
-        |]
+        
+getRandomPhraseR :: Handler Html
+getRandomPhraseR = do 
+    frases <- runDB $ selectList [] [Asc FrasesFrase]
+    let fraseKey = fmap (\(Entity key, _) -> randomR key) frases
+    frase <- runDB $ get404 fraseKey
+    [whamlet|
+        <p>#{frase}
+    |]
 
     -- addScript (Static script_js) -> js interno
     -- 8aQZvtkO
