@@ -1,15 +1,6 @@
 $maybe mensa <- msg 
     <div>
         ^{mensa}
-    
-<div class="col-md-4 m-auto text-center">
-    <h1>
-        Login
-    
-    <form method=post action=@{EntrarR}>
-        ^{widget}
-        <br>
-        <input type="submit" value="Entrar" class="btn-lg btn-secondary w-50 m-auto">
         
 <header class="masthead">
     <div class="container h-100">
