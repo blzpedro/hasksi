@@ -37,10 +37,10 @@ getGeraFraseR = do
         <header class="masthead">
             <div class="container h-100">
               <div class="row h-100">
-                <div class="col-lg-12 my-auto">
+                <div class="col-lg-6 my-auto m-auto">
                     <h1 .title>HaskellMilGrau - só frase top!
                     <div .logo-image></div>
-                    <button #btn-random .btn-danger>Clique aqui e<br> gere sua frase!
+                        <button #btn-random .btn-danger>Clique aqui e<br> gere sua frase!
         |]
         -- let randomKey = randomR (1,16 :: Int)
         -- frase <- get $ Key $ PersistInt64 (fromIntegral randomKey)
