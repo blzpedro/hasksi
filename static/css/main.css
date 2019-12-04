@@ -50,6 +50,7 @@ a:hover{
 #btn-random{
     margin: 30px auto;
     display: block;
+    outline: none;
 }
 
 body {
