@@ -134,6 +134,45 @@ input{
 * {
     outline: none;
 }
+
+       .form-group.material-style {
+	 position: relative;
+	 margin-top: 1rem;
+}
+ .form-group.material-style input {
+	 border-radius: 0px;
+	 border-top: none;
+	 border-left: none;
+	 border-right: none;
+	 padding-left: 0px;
+	 padding-right: 0px;
+}
+ .form-group.material-style input:placeholder-shown + label {
+	 top: 5px;
+	 left: 0px;
+	 font-weight: 500;
+}
+ .form-group.material-style input:focus {
+	 box-shadow: inset 0px -1px 0px blue;
+	 border-color: blue;
+}
+ .form-group.material-style input:focus + label {
+	 top: -18px;
+	 font-size: 11px;
+	 color: blue;
+	 font-weight: 500;
+}
+ .form-group.material-style label {
+	 position: absolute;
+	 top: -18px;
+	 font-weight: 500;
+	 font-size: 11px;
+	 color: blue;
+	 transition: all 0.2s;
+	 -moz-transition: all 0.2s;
+	 -webkit-transition: all 0.2s;
+	 -o-transition: all 0.2s;
+}
 /*!
  * Start Bootstrap - New Age v5.0.7 (https://startbootstrap.com/template-overviews/new-age)
  * Copyright 2013-2019 Start Bootstrap
