@@ -44,10 +44,6 @@ postUsuarioR = do
         FormSuccess (usuario,veri) -> do 
             if (usuarioSenha usuario == veri) then do 
                 runDB $ insert usuario 
-                setMessage [shamlet|
-                    <div #certo>
-                        Deu bom
-                |]
                 redirect EntrarR
             else do 
                 setMessage [shamlet|
