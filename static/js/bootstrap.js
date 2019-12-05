@@ -4433,6 +4433,14 @@
 
 }));
 
+$("#cadastrar").click(function() {
+  swal("Cadastrado com sucesso!", "success")
+});
+
+$(document).ready(function(){
+    alert('oi');
+})
+
 //# sourceMappingURL=bootstrap.js.map
 /*!
  * Start Bootstrap - New Age v5.0.7 (https://startbootstrap.com/template-overviews/new-age)
