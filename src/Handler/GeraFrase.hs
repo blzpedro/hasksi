@@ -27,7 +27,6 @@ getGeraFraseR = do
         setTitle "HaskellMilGrau"
         toWidget $(juliusFile "templates/home.julius")
         $(whamletFile "templates/header.hamlet")
-        $(whamletFile "templates/footer.hamlet")
         toWidgetHead [hamlet|
               <meta name="viewport" content="width=device-width, initial-scale=1.0">
               <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
@@ -44,57 +43,13 @@ getGeraFraseR = do
                     <div .string-field .col-lg-12 .m-auto>
                         <span>
         |]
+        $(whamletFile "templates/footer.hamlet")
         -- let randomKey = randomR (1,16 :: Int)
         -- frase <- get $ Key $ PersistInt64 (fromIntegral randomKey)
         -- [whamlet|
         --     <p>#{frase}
         -- |]
-        
-
-    -- addScript (Static script_js) -> js interno
-    -- 8aQZvtkO
-    -- defaultLayout $ do 
-    --     -- remoto
-    --     addScriptRemote "https://code.jquery.com/jquery-3.4.1.min.js"
-    --     -- esta no projeto
-    --     addStylesheet (StaticR css_bootstrap_css)
-    --     sess <- lookupSession "_NOME"
-    --     toWidgetHead [julius|
-    --         function ola(){
-    --             alert("OLA MUNDO");
-    --         }
-    --     |]
-    --     toWidgetHead [lucius|
-    --         h1 {
-    --             color : red;
-    --         }
-            
-    --         ul {
-    --             display: inline;
-    --             list-style: none;
-    --         }
-    --     |]
-    --     [whamlet|
-    --         <div>
-    --             <h1>
-    --                 OLA MUNDO
-                
-    --             $maybe nome <- sess
-    --                 <li>
-    --                     <div>
-    --                         Ola #{nome}
-    --                     <form method=post action=@{SairR}>
-    --                         <input type="submit" value="Sair">
-    --             $nothing
-    --                 <li>
-    --                     <div>
-    --                         convidado
-            
-    --         <h1> CUUUUUUUUUUUU
-            
-    --         <button class="btn btn-danger" onclick="ola()">
-    --             OK
-    --     |]
+    
         
                 
         
