@@ -25,7 +25,6 @@ getHomeR = do
         addScript $ StaticR js_bootstrap_js
         setTitle "HaskellMilGrau"
         $(whamletFile "templates/header.hamlet")
-        $(whamletFile "templates/footer.hamlet")
         $(whamletFile "templates/home.hamlet")
         toWidget $(juliusFile "templates/home.julius")
         toWidgetHead [hamlet|
@@ -34,6 +33,7 @@ getHomeR = do
               <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
               <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
         |] 
+        $(whamletFile "templates/footer.hamlet")
         -- randomPhrase -> select "frase" from "frases" ORDER BY random() limit 1;
         -- let randomKey = randomR (1,16 :: Int)
         -- frase <- get $ Key $ PersistInt64 (fromIntegral randomKey)
