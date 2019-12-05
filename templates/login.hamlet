@@ -5,7 +5,7 @@ $maybe mensa <- msg
 <header class="masthead">
     <div class="container h-100">
       <div class="row h-100">
-        <div class="col-lg-6 my-auto m-auto text-center box-login form-group material-style">
+        <div class="col-lg-6 my-auto m-auto text-center box-login material-style">
             <h1>
                 Login
         
