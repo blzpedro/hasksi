@@ -131,6 +131,9 @@ input{
     padding: 20px;
 }
 
+* {
+    outline: none;
+}
 /*!
  * Start Bootstrap - New Age v5.0.7 (https://startbootstrap.com/template-overviews/new-age)
  * Copyright 2013-2019 Start Bootstrap
