@@ -7,8 +7,6 @@
 
 /frase GeraFraseR GET
 
-/sobre SobreR GET
-
 /aluno   AlunoR GET POST
 /listar  ListAlunoR GET 
 /aluno/#AlunoId/apagar ApagarAlunoR POST
