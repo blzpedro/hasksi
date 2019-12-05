@@ -4434,7 +4434,11 @@
 }));
 
 $("#cadastrar").click(function() {
-  swal("Cadastrado com sucesso!", "success")
+  swal(
+				'Boa monstro',
+				'Já fez sua conta agora vai ler umas paradas!',
+				'success'
+			)
 });
 
 $(document).ready(function(){
