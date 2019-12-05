@@ -12,7 +12,7 @@ import Text.Lucius
 import Text.Julius
 --import Network.HTTP.Types.Status
 import Database.Persist.Postgresql
-import Database.Persist.Types (PersistValue(PersistInt64))
+-- import Database.Persist.Types (PersistValue(PersistInt64))
 
 
 getHomeR :: Handler Html
