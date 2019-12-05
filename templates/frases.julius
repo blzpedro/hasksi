@@ -9,23 +9,22 @@ $(document).ready(function() {
   function gerarFrases() {
     do {
       var frases = [
-          "Você não é orientada a objeto mas é cheia de classe!",
-          "A monad is just a monoid in the category of endofunctors.",
-          "Uma mônada é apenas um monóide na categoria de endofunctores.",
-          "Haskell é daora!",
-          "Head - pegue um saco de pão Pulman, abra, pegue a primeira fatia, isso é o head.",
-          "Tail  - com seu pacote de Trakinas, pegue a primera bolacha e de para seu amigo, o que restar é seu tail.",
+          "Você não é orientada a objeto mas é cheia de classe! 😍",
+          "Uma mônada é apenas um monóide na categoria de endofunctores. 😎",
+          "Haskell é daora! 🤓",
+          "Head - pegue um saco de pão Pulman, abra, pegue a primeira fatia, isso é o head. 🍞",
+          "Tail  - com seu pacote de Trakinas, pegue a primera bolacha e de para seu amigo, o que restar é seu tail. ",
           "Last – aqui é o caso do Halls na sala de aula, você vai puxar do bolso para comer e alguém vai ver, quando você for pegar o seu só vai ter o último.",
-          "Init – quando você tem uma lista de tarefas para fazer e o último é muito difícil.",
-          "Length – quando você pega suas cartinhas do Pokémom e começa a contar.",
-          "Reverse - reverte uma lista. Faça isso na fila do banco e verá o caos.",
+          "Init – quando você tem uma lista de tarefas para fazer e o último é muito difícil. 📖",
+          "Length – quando você pega suas cartinhas do Pokémom e começa a contar. 🔢",
+          "Reverse - reverte uma lista. Faça isso na fila do banco e verá o caos. 🔄",
           "Take - recebe um número e uma lista. Ele extrai a quantidade de elementos desde o início da lista.",
-          "Drop - recebe um número e uma lista.Ele retira o número de elementos a partir do ínicio da lista.",
+          "Drop - recebe um número e uma lista. Ele retira o número de elementos a partir do ínicio da lista.",
           "Maximum - recebe uma lista de coisas que podem ser colocadas em algum tipo de ordem e retorna o seu maior elemento.",
-          "Sum - recebe uma lista de números e retorna a sua soma.",
-          "Eu programo em HTML!",
-          "Faz curso de informática? Arruma impressora?",
-          "Se compilou sem erro deu certo!"
+          "Sum - recebe uma lista de números e retorna a sua soma. ➕",
+          "Eu programo em HTML! 💻",
+          "Faz curso de informática? Arruma impressora? 🖨",
+          "Se compilou sem erro deu certo! 🙏"
         ]
 
       var randomArrayPosition = Math.floor(Math.random() * frases.length);

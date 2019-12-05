@@ -1,15 +1,16 @@
 $maybe mensa <- msg 
     <div>
         ^{mensa}
-        
 <header class="masthead">
     <div class="container h-100">
       <div class="row h-100">
         <div class="col-lg-6 my-auto m-auto text-center box-login material-style">
             <h1>
                 Login
+                
+                
         
-            <form method=post action=@{EntrarR} autocomplete="off">
+            <form method=post action=@{EntrarR} autocomplete="on">
                 ^{widget}
                 <br>
                 <input type="submit" value="Entrar" style="color: black !important; border-color: black !important" class="btn btn-outline js-scroll-trigger">
