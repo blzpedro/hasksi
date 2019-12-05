@@ -38,7 +38,7 @@ getGeraFraseR = do
             <div class="container h-100">
               <div class="row h-100">
                 <div class="col-lg-10 my-auto m-auto">
-                    <h1 .title>HaskellMilGrau - só frase top!
+                    <h1 .title>HaskellMilGrau - só frase mil grau!
                     <button #btn-random .btn-danger>Clique aqui e<br> gere sua frase!
                     <div .string-field .col-lg-12 .m-auto>
                         <span>
