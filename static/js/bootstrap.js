@@ -4441,10 +4441,6 @@ $("#cadastrar").click(function() {
 			)
 });
 
-$(document).ready(function(){
-    alert('oi');
-})
-
 //# sourceMappingURL=bootstrap.js.map
 /*!
  * Start Bootstrap - New Age v5.0.7 (https://startbootstrap.com/template-overviews/new-age)

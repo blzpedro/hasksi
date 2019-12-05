@@ -34,8 +34,8 @@ getUsuarioR = do
         $(whamletFile "templates/footer.hamlet")
         addScriptRemote "https://code.jquery.com/jquery-3.4.1.min.js"
         addScript (StaticR js_bootstrap_js)
-        addScriptRemote "https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"
-        
+        -- addScriptRemote "https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"
+        --8aQZvtkO
 postUsuarioR :: Handler Html
 postUsuarioR = do 
     ((result,_),_) <- runFormPost formUsu
@@ -43,10 +43,7 @@ postUsuarioR = do
         FormSuccess (usuario,veri) -> do 
             if (usuarioSenha usuario == veri) then do 
                 runDB $ insert usuario 
-                setMessage [shamlet|
-                    <div>
-                        Usuário incluído
-                |]
+                addScriptRemote "https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"
                 redirect UsuarioR
             else do 
                 setMessage [shamlet|
