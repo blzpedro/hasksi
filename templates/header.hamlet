@@ -10,9 +10,6 @@
                         <a href=@{GeraFraseR} class="nav-link " data-value="sobre">Gerar frase
                         
                 <li class="nav-item">
-                        <a href=@{SobreR} class="nav-link " data-value="sobre">Sobre
-                        
-                <li class="nav-item">
                     <a href="@{SairR}" class="nav-link " data-value="sair">Sair
             $nothing      
                 <li class="nav-item">
