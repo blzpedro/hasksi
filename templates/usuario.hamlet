@@ -9,7 +9,7 @@ $maybe mensa <- msg
             <h1>
                 Login
         
-            <form method=post action=@{UsuarioR}>
+            <form method=post action=@{UsuarioR} autocomplete="off">
                 ^{widget}
                 <br>
                 <input type="submit" value="Cadastrar" style="color: black !important; border-color: black !important"  class="btn btn-outline js-scroll-trigger">
