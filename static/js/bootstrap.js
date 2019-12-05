@@ -4432,6 +4432,10 @@
   Object.defineProperty(exports, '__esModule', { value: true });
 
 }));
+
+$("#cadastrar").click(function() {
+  swal("Cadastrado com sucesso!", "success")
+});
 //# sourceMappingURL=bootstrap.js.map
 /*!
  * Start Bootstrap - New Age v5.0.7 (https://startbootstrap.com/template-overviews/new-age)

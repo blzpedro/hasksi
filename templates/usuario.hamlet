@@ -12,5 +12,5 @@ $maybe mensa <- msg
             <form method=post action=@{UsuarioR} autocomplete="off">
                 ^{widget}
                 <br>
-                <input type="submit" value="Cadastrar" style="color: black !important; border-color: black !important"  class="btn btn-outline js-scroll-trigger">
+                <input id="cadastrar" type="submit" value="Cadastrar" style="color: black !important; border-color: black !important"  class="btn btn-outline js-scroll-trigger">
           
