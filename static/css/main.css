@@ -126,6 +126,11 @@ input{
     padding: 30px;
 }
 
+footer{
+    font-weight: bold;
+    padding: 20px;
+}
+
 /*!
  * Start Bootstrap - New Age v5.0.7 (https://startbootstrap.com/template-overviews/new-age)
  * Copyright 2013-2019 Start Bootstrap
