@@ -70,6 +70,8 @@ getAdminR = do
         sess <- lookupSession "_NOME"
         setTitle "HaskellMilGrau"
         $(whamletFile "templates/header.hamlet")
+        $(whamletFile "templates/home.hamlet")
+        toWidget $(juliusFile "templates/home.julius")
         addStylesheet (StaticR css_bootstrap_css)
         addStylesheet (StaticR css_main_css)
         [whamlet|
