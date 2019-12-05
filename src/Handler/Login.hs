@@ -68,12 +68,21 @@ getAdminR :: Handler Html
 getAdminR = do 
     defaultLayout $ do
         sess <- lookupSession "_NOME"
+        addStylesheet (StaticR css_bootstrap_css)
+        addStylesheet (StaticR css_main_css)
+        addScript $ StaticR js_jquery_min_js
+        addScript $ StaticR js_bootstrap_js
         setTitle "HaskellMilGrau"
         $(whamletFile "templates/header.hamlet")
         $(whamletFile "templates/home.hamlet")
         toWidget $(juliusFile "templates/home.julius")
-        addStylesheet (StaticR css_bootstrap_css)
-        addStylesheet (StaticR css_main_css)
+        toWidgetHead [hamlet|
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+              <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+              <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+              <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+        |] 
+        $(whamletFile "templates/footer.hamlet")
         -- [whamlet|
             -- <h1>
                 -- Bem-vindo admin!
