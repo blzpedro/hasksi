@@ -25,7 +25,7 @@ getGeraFraseR = do
         addScript $ StaticR js_jquery_min_js
         addScript $ StaticR js_bootstrap_js
         setTitle "HaskellMilGrau"
-        toWidget $(juliusFile "templates/home.julius")
+        toWidget $(juliusFile "templates/frases.julius")
         $(whamletFile "templates/header.hamlet")
         toWidgetHead [hamlet|
               <meta name="viewport" content="width=device-width, initial-scale=1.0">
