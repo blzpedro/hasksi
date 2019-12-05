@@ -39,9 +39,8 @@ getGeraFraseR = do
               <div class="row h-100">
                 <div class="col-lg-6 my-auto m-auto">
                     <h1 .title>HaskellMilGrau - só frase top!
-                    <div .logo-image></div>
                         <button #btn-random .btn-danger>Clique aqui e<br> gere sua frase!
-                    <div .string-field>
+                    <div .string-field .col-lg-12 .m-auto>
                         <span>
         |]
         -- let randomKey = randomR (1,16 :: Int)

@@ -86,8 +86,8 @@ body {
 .string-field {
     text-align: center;
     font-weight: bold;
-    color: white;
-    background-color: gray;
+    color: black;
+    background-color: #9292925e;
     width: 50%;
     margin: 0 auto;
     height: 200px;
