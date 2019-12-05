@@ -74,7 +74,7 @@ getAdminR = do
         toWidget $(juliusFile "templates/home.julius")
         addStylesheet (StaticR css_bootstrap_css)
         addStylesheet (StaticR css_main_css)
-        [whamlet|
-            <h1>
-                Bem-vindo admin!
-        |]
+        --[whamlet|
+            --<h1>
+                --Bem-vindo admin!
+        --|]
