@@ -5,9 +5,9 @@
           <div class="mx-auto">
             $maybe nome <- sess
               <h2 class="">Bem-vindo - #{nome}
-              <h1 class="mb-5">Opa, já entrou no nosso site, agora a diversão e a leitura começa, sai do ZAP e presta atenção nas frases! <br> Decora todas as frases que sairem e com certeza a P3 vair vir com um 
-                  <strong>LINDO(ou não D:)
-              10!!!!
+              <h1 class="mb-5">Opa, já entrou no nosso site, agora a diversão e a leitura começa, sai do ZAP e presta atenção nas frases! <br> Decore todas as frases que sairem e com certeza a P3 vair vir com um 
+                  <strong>LINDO(ou não 😭)
+                10!!!!
             $nothing
               <h1 class="mb-5">Só as melhores frases do Haskell (ou algumas sem sentido?), explicativas e de fácil entendimento, lendo as nossas frases cê vai gabaritar na sua P3 de Haskell (100% comprovado!).
             $maybe _ <- sess
