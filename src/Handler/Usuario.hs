@@ -28,10 +28,10 @@ getUsuarioR = do
         sess <- lookupSession "_NOME"
         setTitle "HaskellMilGrau"
         $(whamletFile "templates/header.hamlet")
-        $(whamletFile "templates/footer.hamlet")
         addStylesheet (StaticR css_bootstrap_css)
         addStylesheet (StaticR css_main_css)
         $(whamletFile "templates/usuario.hamlet")
+        $(whamletFile "templates/footer.hamlet")
         
 postUsuarioR :: Handler Html
 postUsuarioR = do 
