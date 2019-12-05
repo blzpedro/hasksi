@@ -36,6 +36,7 @@ getUsuarioR = do
         addScript (StaticR js_bootstrap_js)
         addScriptRemote "https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"
         --8aQZvtkO
+        
 postUsuarioR :: Handler Html
 postUsuarioR = do 
     ((result,_),_) <- runFormPost formUsu
@@ -53,5 +54,5 @@ postUsuarioR = do
                     <div>
                         Senhas não estão iguais
                 |]
-                redirect UsuarioR
+                redirect EntrarR
         _ -> redirect HomeR

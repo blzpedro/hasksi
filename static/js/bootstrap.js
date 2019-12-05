@@ -4434,16 +4434,13 @@
 }));
 
 
-if(document.getElementById("#certo") !== null)
-{
-  $("#cadastrar").click(function() {
-    swal(
-  				'Boa monstro',
-  				'Já fez sua conta agora vai ler umas paradas!',
-  				'success'
-  			)
-  });
-}
+$("#cadastrar").click(function() {
+  swal(
+				'Boa monstro',
+				'Já fez sua conta agora vai ler umas paradas!',
+				'success'
+			)
+});
 
 
 //# sourceMappingURL=bootstrap.js.map
