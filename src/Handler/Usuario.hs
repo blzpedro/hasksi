@@ -44,8 +44,8 @@ postUsuarioR = do
             if (usuarioSenha usuario == veri) then do 
                 runDB $ insert usuario 
                 setMessage [shamlet|
-                    <div>
-                        Usuário incluído
+                    <div #certo>
+                        Deu bom
                 |]
                 redirect UsuarioR
             else do 
