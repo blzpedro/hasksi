@@ -48,11 +48,11 @@ postUsuarioR = do
                     <div #certo>
                         Deu bom
                 |]
-                redirect UsuarioR
+                redirect EntrarR
             else do 
                 setMessage [shamlet|
                     <div>
                         Senhas não estão iguais
                 |]
-                redirect EntrarR
+                redirect UsuarioR
         _ -> redirect HomeR
