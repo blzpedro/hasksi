@@ -27,6 +27,7 @@ getGeraFraseR = do
         setTitle "HaskellMilGrau"
         toWidget $(juliusFile "templates/home.julius")
         $(whamletFile "templates/header.hamlet")
+        $(whamletFile "templates/footer.hamlet")
         toWidgetHead [hamlet|
               <meta name="viewport" content="width=device-width, initial-scale=1.0">
               <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">

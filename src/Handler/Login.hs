@@ -28,6 +28,7 @@ getEntrarR = do
         addStylesheet (StaticR css_bootstrap_css)
         addStylesheet (StaticR css_main_css)
         $(whamletFile "templates/login.hamlet")
+        $(whamletFile "templates/footer.hamlet")
 
 postEntrarR :: Handler Html
 postEntrarR = do 
