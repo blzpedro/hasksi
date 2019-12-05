@@ -32,6 +32,7 @@ getUsuarioR = do
         addStylesheet (StaticR css_main_css)
         $(whamletFile "templates/usuario.hamlet")
         $(whamletFile "templates/footer.hamlet")
+        addScriptRemote "https://code.jquery.com/jquery-3.4.1.min.js"
         addScriptRemote "https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"
         
 postUsuarioR :: Handler Html
